@@ -1,0 +1,44 @@
+$colors: (
+    "primary" : #9cbcb7,
+    "secondary" : #a68c6d,
+    "dark" : #3b3e47,
+    "light" : #ebebed,
+    "white" : #fefefe,
+    "success" : #5cc9ad,
+    "warning" : #f9c851,
+    "danger" : #a11d19,
+    "info" : #6aa6ad,
+    "disabled" : #e5e4e5,
+);
+$hover-colors: (
+    "primary" : lighten(#9cbcb7, 10%), 
+    "secondary" : lighten(#a68c6d, 10%), 
+    "dark" : darken(#3b3e47, 10%),   
+    "light" : lighten(#ebebed, 10%), 
+    "white" : lighten(#fefefe, 10%), 
+    "success" : lighten(#5cc9ad, 10%), 
+    "warning" : darken(#f9c851, 10%), 
+    "danger" : darken(#a11d19, 10%), 
+    "info" : lighten(#6aa6ad, 10%),   
+    "disabled" : lighten(#e5e4e5, 10%) 
+);
+
+@function get-color($color-name){
+    @return map-get($colors, $color-name );
+}
+@function get-hover-color($color-name){
+    @return map-get($hover-colors, $color-name );
+}
+
+:root {
+    --primary-color: #{get-color("primary")};
+    --secondary-color: #{get-color("secondary")};
+    --dark-color: #{get-color("dark")};
+    --light-color: #{get-color("light")};
+    --white-color: #{get-color("white")};
+    --success-color: #{get-color("success")};
+    --warning-color: #{get-color("warning")};
+    --danger-color: #{get-color("danger")};
+    --info-color: #{get-color("info")};
+    --disabled-color: #{get-color("disabled")};
+}

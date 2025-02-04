@@ -1,0 +1,22 @@
+.main-layout{
+    position: relative;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    justify-content: center;
+    margin: 0 1rem auto;
+    gap:0.5rem;
+    height: auto;
+    min-height: 94vh;
+    .layout{
+        background: var(--white-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+        margin:1rem 0.5rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+    }
+}
+
