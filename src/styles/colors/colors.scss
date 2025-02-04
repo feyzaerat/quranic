@@ -9,6 +9,7 @@ $colors: (
     "danger" : #a11d19,
     "info" : #6aa6ad,
     "disabled" : #e5e4e5,
+    "soft-golden" : #dec8a1,
 );
 $hover-colors: (
     "primary" : lighten(#9cbcb7, 10%), 
@@ -41,4 +42,5 @@ $hover-colors: (
     --danger-color: #{get-color("danger")};
     --info-color: #{get-color("info")};
     --disabled-color: #{get-color("disabled")};
+    --soft-golden-color: #{get-color("soft-golden")};
 }

@@ -1,0 +1,95 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  max-height: 88vh;
+  position: relative;
+  padding: 0 !important;
+  .sidebar-header {
+    background: transparent;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 0.25rem;
+    .title {
+      p {
+        margin-bottom: 0 !important;
+        color: var(--secondary-color);
+      }
+    }
+    .sidebar-nav {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      column-gap: 1rem;
+      background: var(--primary-color);
+      padding: 0.25rem 2rem;
+      border-radius: 5rem;
+      margin-bottom: 1rem;
+      a {
+        font-size: 14px;
+        /* &:first-child{
+            border-right: 2px solid var(--primary-color);
+            padding-right:0.75rem;
+        }
+        &:last-child{
+            border-left: 2px solid var(--primary-color);
+            padding-left:0.75rem;
+        }*/
+      }
+    }
+    .sidebar-search {
+      input {
+        padding: 0.25rem 0.5rem!important;
+        font-size: 11px;
+        border-radius: 5rem;
+        outline: none!important;
+        border:2px solid var(--primary-color);
+        ::placeholder {
+          font-size: 11px;
+        }
+        :active{
+            border:none!important;
+            border-color: transparent!important;
+        }
+        
+      }
+    }
+  }
+
+  .sidebar-content {
+    width: 100%;
+    height: 100%;
+    max-height: 64vh;
+    position: relative;
+    overflow-y: scroll;
+    padding: 0.5rem;
+    .surahRow {
+      &:hover {
+        background: var(--soft-golden-color);
+        transition: 0.5s ease-in-out;
+        border-radius: 0.5rem;
+        padding: 0 1rem;
+      }
+      a {
+        font-size: 13px;
+
+        .surahNumber {
+          color: var(--primary-color);
+        }
+        .surahNameArabicName {
+          font-family: serif;
+        }
+      }
+    }
+  }
+}
