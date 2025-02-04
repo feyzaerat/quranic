@@ -7,7 +7,7 @@
   margin: 0 1rem auto;
   gap: 0.5rem;
   height: auto;
-  min-height: 94vh;
+  
   .layout {
     background: var(--white-color);
     display: flex;
@@ -19,6 +19,7 @@
     border-radius: 0.5rem;
     .page {
         width: 100%;
+        
         .header{
             display: flex;
             flex-direction: row-reverse;
@@ -46,8 +47,12 @@
         font-size: 2.25rem;
         text-align: right;
         font-family: serif;
+        padding: 1rem 0.5rem;
         width: 100%;
+        height: 100%;
         overflow-x: hidden;
+        overflow-y: scroll;
+        max-height: 54vh;
        div{
         max-width: 100%;
         overflow-wrap: break-word;
