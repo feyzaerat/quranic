@@ -27,25 +27,42 @@
   justify-content: space-between;
   align-items: center;
   background: var(--light-color);
-  border: 3px solid var(--secondary-color);
-  padding: 1rem;
-  border-radius: 0.5rem;
-}
-.main-layout .layout .page .header .name {
+  border-bottom: 3px solid var(--secondary-color);
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
   font-family: serif;
+}
+.main-layout .layout .page .header p {
+  margin-bottom: 0;
+}
+.main-layout .layout .page .header .right-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main-layout .layout .page .header .surahEnglishName,
+.main-layout .layout .page .header .surahArabicName,
+.main-layout .layout .page .header .SelectBox {
+  font-family: serif;
+  margin-bottom: 0;
+  font-size: 14px;
 }
 .main-layout .layout .page .bismillah {
   font-size: 2.5rem;
   color: var(--secondary-color);
   font-family: cursive;
   margin-right: 0.25rem;
+  cursor: pointer;
+}
+.main-layout .layout .page .bismillah:hover {
+  color: var(--success-color);
+  transition: 0.3s ease-in-out;
 }
 .main-layout .layout .page .surah {
   display: flex;
-  flex-direction: row-reverse;
   flex-wrap: wrap;
   row-gap: 1.25rem;
-  font-size: 2.25rem;
+  font-size: 1.75rem;
   text-align: right;
   font-family: serif;
   padding: 1rem 0.5rem;
@@ -53,38 +70,74 @@
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  max-height: 54vh;
+  max-height: 64vh;
 }
 .main-layout .layout .page .surah div {
   max-width: 100%;
   overflow-wrap: break-word;
   word-break: break-word;
-  overflow: hidden;
 }
 .main-layout .layout .page .surah div .ayah {
-  width: 100%;
+  position: relative;
   display: inline;
-  flex-direction: row-reverse;
-  align-items: center;
-  -moz-column-gap: 1rem;
-       column-gap: 1rem;
-  flex-wrap: wrap;
-  word-break: break-word;
   direction: rtl;
-}
-.main-layout .layout .page .surah span {
-  color: var(--secondary-color);
-  border: 3px solid var(--secondary-color);
-  background: var(--light-color);
-  border-radius: 50%;
-  width: 40px;
-  height: 40px;
-  margin: 0 0.5rem;
-  font-size: 1rem;
-  font-weight: 600;
-  display: inline-flex;
+  unicode-bidi: isolate;
   vertical-align: middle;
+  line-height: 4rem;
+  cursor: pointer;
+}
+.main-layout .layout .page .surah div .ayah:hover {
+  color: var(--success-color);
+  transition: 0.3s ease-in-out;
+}
+.main-layout .layout .page .surah div .ayah span {
+  position: relative;
+  top: -0.2rem;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
+  margin: 0 0.25rem 0 0.75rem;
+  color: var(--secondary-color);
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 0.5rem;
+  font-weight: 600;
   font-family: serif;
+  text-align: center;
+  background-image: url("../styles/frame3.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  filter: sepia(50%);
+}
+.main-layout .layout .page .surah div .ayah span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: inherit;
+  background-repeat: no-repeat;
+  background-size: inherit;
+  filter: sepia(1);
+}
+.main-layout .layout .page .surah div .ayah .ayahTranslatePopup {
+  position: fixed;
+  top: 22%;
+  left: 25%;
+  z-index: 99;
+  background: var(--white-color);
+  color: var(--primary-color);
+  padding: 0.5rem;
+  border-radius: 5px;
+  width: 500px;
+  text-align: left;
+  line-height: 16px;
+  font-size: 14px;
+  transition: opacity 0.2s ease-in-out;
+}
+.main-layout .layout .page .surah div .ayah .ayahTranslatePopup:hover {
+  opacity: 1;
+  visibility: visible;
 }/*# sourceMappingURL=layout.css.map */

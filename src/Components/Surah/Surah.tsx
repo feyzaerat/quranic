@@ -2,23 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 type Surah = {
-  number: number;
-  englishName: string;
-  name: string;
-  revelationType: string;
-};
-
-type ApiResponse = {
-  data: Surah[];
+  surahName: string;
+  surahNameArabic: string;
+  revelationPlace: string;
+  totalAyah: number;
 };
 
 const Surah = () => {
   const [surahData, setSurahData] = useState<Surah[] | null>(null);
 
   useEffect(() => {
-    fetch("https://api.alquran.cloud/v1/surah")
+    fetch("https://quranapi.pages.dev/api/surah.json")
       .then((response) => response.json())
-      .then((data: ApiResponse) => setSurahData(data.data))
+      .then((data) => setSurahData(data)) 
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
 
@@ -26,12 +22,12 @@ const Surah = () => {
     <>
       {surahData ? (
         <div className="surahList">
-          {surahData.map((surah) => (
-            <div key={surah.number} className="surahRow">
+          {surahData.map((surah, index) => (
+            <div key={index} className="surahRow">
               <Link to="">
-                <span className="surahNumber">{surah.number} - </span>
-                <span className="surahNameEnglish">{surah.englishName} </span>
-                <span className="surahNameArabicName">({surah.name}) </span>
+                <span className="surahNumber">{index + 1} - </span>
+                <span className="surahNameEnglish">{surah.surahName} </span>
+                <span className="surahNameArabicName">{surah.surahNameArabic} </span>
               </Link>
             </div>
           ))}

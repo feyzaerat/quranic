@@ -79,6 +79,10 @@
         transition: 0.5s ease-in-out;
         border-radius: 0.5rem;
         padding: 0 1rem;
+        color:var(--white-color);
+        .surahNumber,.surahNameArabicName{
+            color:var(--white-color);
+        }
       }
       a {
         font-size: 13px;
@@ -88,6 +92,7 @@
         }
         .surahNameArabicName {
           font-family: serif;
+          color: var(--primary-color);
         }
       }
     }

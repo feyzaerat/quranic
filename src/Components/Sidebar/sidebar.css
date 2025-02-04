@@ -78,6 +78,10 @@
   transition: 0.5s ease-in-out;
   border-radius: 0.5rem;
   padding: 0 1rem;
+  color: var(--white-color);
+}
+.sidebar .sidebar-content .surahRow:hover .surahNumber, .sidebar .sidebar-content .surahRow:hover .surahNameArabicName {
+  color: var(--white-color);
 }
 .sidebar .sidebar-content .surahRow a {
   font-size: 13px;
@@ -87,4 +91,5 @@
 }
 .sidebar .sidebar-content .surahRow a .surahNameArabicName {
   font-family: serif;
+  color: var(--primary-color);
 }/*# sourceMappingURL=sidebar.css.map */
