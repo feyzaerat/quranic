@@ -4,6 +4,11 @@
 }
 .navbar-layout .navbar-brand {
   color: var(--primary-color);
+  font-family: var(--font-waterfall);
+  font-weight: 600;
+  margin-top: -0.75rem;
+  margin-left: 0.5rem;
+  font-size: 28px;
 }
 .navbar-layout .right-nav-circle {
   margin: 0 0.5rem;

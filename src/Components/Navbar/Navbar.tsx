@@ -12,7 +12,7 @@ function NavScrollExample() {
   return (
     <Navbar expand="lg" className="navbar-layout">
       <Container fluid>
-        <Navbar.Brand href="#">FKE Reading Quran</Navbar.Brand>
+        <Navbar.Brand href="#">Erat Qurânî</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

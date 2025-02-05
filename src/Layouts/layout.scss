@@ -128,18 +128,22 @@
             }
             .ayahTranslatePopup{
                 position: fixed;
-                top:22%;
-                left:25%;
+                bottom:67%;
+                right:27%;
                 z-index: 99;
                 background: var(--white-color);
-                color: var(--primary-color);
+                color: var(--dark-color);
                 padding: 0.5rem;
                 border-radius: 5px;
-                width: 500px;
+                max-width: 620px;
                 text-align: left;
                 line-height: 16px;
-                font-size: 14px;
+                font-size: 12px;
+                font-weight: 600;
                 transition: opacity 0.2s ease-in-out;
+                box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+                //border-right:3px solid var(--primary-color);
+                border-bottom:3px solid var(--primary-color);
                 &:hover{
                     opacity: 1;
                     visibility: visible;
