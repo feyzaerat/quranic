@@ -1,41 +1,44 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import { SurahData } from "../../API/SurahModel";
+import SurahService from "../../API/SurahService";
 
-type Surah = {
-  surahName: string;
-  surahNameArabic: string;
-  revelationPlace: string;
-  totalAyah: number;
-};
 
 const Surah = () => {
-  const [surahData, setSurahData] = useState<Surah[] | null>(null);
+  const [surahData, setSurahData] = useState<SurahData[]>([]);
+  const [loading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
-    fetch("https://quranapi.pages.dev/api/surah.json")
-      .then((response) => response.json())
-      .then((data) => setSurahData(data)) 
-      .catch((error) => console.error("Error fetching data:", error));
+    const fetchSurahs = async () => {
+      try {
+        const response = await SurahService.getAllSurah();
+        setSurahData(response.data);
+      } catch (error) {
+        console.error("API Error:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchSurahs();
   }, []);
 
   return (
-    <>
-      {surahData ? (
-        <div className="surahList">
-          {surahData.map((surah, index) => (
-            <div key={index} className="surahRow">
-              <Link to="">
-                <span className="surahNumber">{index + 1} - </span>
-                <span className="surahNameEnglish">{surah.surahName} </span>
-                <span className="surahNameArabicName">{surah.surahNameArabic} </span>
-              </Link>
-            </div>
-          ))}
-        </div>
-      ) : (
+    <div className="surahList">
+      {loading ? (
         <p>Loading...</p>
+      ) : (
+        surahData.map((surah) => (
+          <div key={surah.surahNo} className="surahRow">
+            <Link to={`/surah/${surah.surahNo}`}>
+              <span className="surahNumber">{surah.surahNo} - </span>
+              <span className="surahNameEnglish">{surah.surahName} </span>
+              <span className="surahNameArabicName">{surah.surahNameArabic} </span>
+            </Link>
+          </div>
+        ))
       )}
-    </>
+    </div>
   );
 };
 

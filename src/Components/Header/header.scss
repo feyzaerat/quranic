@@ -1,0 +1,28 @@
+.header {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--light-color);
+    border-bottom: 3px solid var(--secondary-color);
+    padding: 0.25rem 1rem;
+    border-radius: 0.25rem;
+    font-family: serif;
+    p {
+      margin-bottom: 0;
+    }
+
+    .right-header {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .surahEnglishName,
+    .surahArabicName,
+    .SelectBox {
+      font-family: serif;
+      margin-bottom: 0;
+      font-size: 14px;
+    }
+  }

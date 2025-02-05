@@ -1,0 +1,49 @@
+.scrollTopBtnContainer {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  bottom: 20px;
+  right: 20px;
+  width: 36px;
+  height: 36px;
+  background: transparent;
+}
+.scrollTopBtnContainer button {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: transparent;
+  box-shadow: var(--primary-color) 4px 2px 2px 0px, var(--disabled-color) 4px -2px 6px 0px;
+  color: var(--dark-color);
+  border-radius: 50%;
+  font-weight: 700;
+}
+.scrollTopBtnContainer button svg {
+  width: 32px;
+  color: var(--primary-color);
+}
+.scrollTopBtnContainer button:hover {
+  background: var(--white-color);
+  box-shadow: var(--primary-color) -2px -2px 2px 0px, var(--white-color) 4px -2px 6px 0px;
+  transition: 0.5s ease-in-out;
+}
+.scrollTopBtnContainer button:hover svg {
+  animation: animation 0.75s infinite;
+  transform: scale3d();
+}
+@keyframes animation {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}/*# sourceMappingURL=scrollTop.css.map */
