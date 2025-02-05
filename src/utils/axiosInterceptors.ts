@@ -1,10 +1,17 @@
 import axios from "axios";
 
-const axiosInterceptors = axios.create({
+const quranApi = axios.create({
   baseURL: "https://quranapi.pages.dev/api/",
+})
+const translateApi = axios.create({
+  baseURL: "https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/info.json",
 });
 
-axiosInterceptors.interceptors.request.use((config) => {
+quranApi.interceptors.request.use((config) => {
+  config.headers["Accept-Language"] = "tr";
+  return config;
+});
+translateApi.interceptors.request.use((config) => {
   config.headers["Accept-Language"] = "tr";
   return config;
 });
@@ -20,4 +27,4 @@ axios.interceptors.response.use(
     );
   }
 );
-export default axiosInterceptors;
+export default {quranApi, translateApi};
