@@ -6,6 +6,36 @@ body{
     height: 100%;
     max-height: 1080px;
     overflow: hidden;
+    &.light{
+        background-color: var(--light-color);
+        button,a{
+            color:var(--primary-color)
+        }
+    }
+    &.dark{
+        background-color: var(--dark-color);
+        .router-content,.layout, .page, .header, .navbar-layout{
+            background-color: var(--dark-color);
+        }
+        .navbar-layout{
+            background-color: var(--dark-color)!important;
+            border-bottom: 1px solid var(--light-color);
+        }
+        .sidebar{
+            background-color: var(--dark-color);
+            box-shadow: rgba(258, 258, 258, 0.45) 0px 25px 20px -20px inset;
+        }
+        button,select,a,p{
+            color:var(--white-color)
+        }
+        color:var(--white-color);
+    }
+    &.soft{
+        background-color: var(--light-color);
+        button,a{
+            color:var(--secondary-color)
+        }
+    }
    
 }
 a{

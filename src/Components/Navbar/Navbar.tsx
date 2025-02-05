@@ -1,6 +1,5 @@
 import Button from "react-bootstrap/Button";
 import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 import NavDropdown from "react-bootstrap/NavDropdown";
@@ -8,9 +7,17 @@ import { IoColorPaletteOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 
 import "./navbar.css"
-function NavScrollExample() {
+import { useState } from "react";
+function Navy() {
+  const [theme, setTheme] = useState<string>("light");
+
+  const handleThemeChange = (newTheme: string) => {
+    setTheme(newTheme);
+    document.body.classList.remove("light", "dark", "soft");
+    document.body.className= newTheme;
+  }
   return (
-    <Navbar expand="lg" className="navbar-layout">
+    <Navbar expand="lg" className={`navbar-layout ${theme}`}>
       <Container fluid>
         <Navbar.Brand href="#">Erat Qurânî</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
@@ -23,19 +30,14 @@ function NavScrollExample() {
             <Nav.Link href="#action1">Home</Nav.Link>
             <Nav.Link href="#action2">Surah</Nav.Link>
             <Nav.Link href="#action3">Cuz</Nav.Link>
-            <NavDropdown title="Link" id="navbarScrollingDropdown">
-              <NavDropdown.Item href="#action4">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action5">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action6">
-                Something else here
-              </NavDropdown.Item>
-            </NavDropdown>
+         
           </Nav>
 
-          <Nav.Link className="right-nav-circle" href="#action10"><IoColorPaletteOutline /></Nav.Link>
+          <NavDropdown className="right-nav-circle" title={<IoColorPaletteOutline />}>
+          <NavDropdown.Item onClick={() => (handleThemeChange("light"))}>Light</NavDropdown.Item>
+          <NavDropdown.Item onClick={() => (handleThemeChange("dark"))}>Dark</NavDropdown.Item>
+          <NavDropdown.Item onClick={() => (handleThemeChange("soft"))}>Soft</NavDropdown.Item>
+          </NavDropdown>
           <Nav.Link className="right-nav-circle" href="#action10"><FaRegUser />
           </Nav.Link>
         </Navbar.Collapse>
@@ -44,4 +46,4 @@ function NavScrollExample() {
   );
 }
 
-export default NavScrollExample;
+export default Navy;

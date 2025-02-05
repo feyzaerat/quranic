@@ -6,6 +6,36 @@ body {
   max-height: 1080px;
   overflow: hidden;
 }
+body.light {
+  background-color: var(--light-color);
+}
+body.light button, body.light a {
+  color: var(--primary-color);
+}
+body.dark {
+  background-color: var(--dark-color);
+  color: var(--white-color);
+}
+body.dark .router-content, body.dark .layout, body.dark .page, body.dark .header, body.dark .navbar-layout {
+  background-color: var(--dark-color);
+}
+body.dark .navbar-layout {
+  background-color: var(--dark-color) !important;
+  border-bottom: 1px solid var(--light-color);
+}
+body.dark .sidebar {
+  background-color: var(--dark-color);
+  box-shadow: rgba(255, 255, 255, 0.45) 0px 25px 20px -20px inset;
+}
+body.dark button, body.dark select, body.dark a, body.dark p {
+  color: var(--white-color);
+}
+body.soft {
+  background-color: var(--light-color);
+}
+body.soft button, body.soft a {
+  color: var(--secondary-color);
+}
 
 a {
   text-decoration: none;
