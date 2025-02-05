@@ -2,11 +2,14 @@ import React, { useEffect, useRef, useState } from "react";
 import { SurahData } from "../../API/SurahModel";
 import "./surah.css";
 import { ScrollTop } from "../../Components";
+import TranslateData from "../../API/TranslateModel";
+
 type Props = {
   surahData: SurahData;
+  translateData: TranslateData;
 };
 
-const Surah = ({ surahData }: Props) => {
+const Surah = ({ surahData, translateData }: Props) => {
   const [hoveredAyahIndex, setHoveredAyahIndex] = useState<number | null>(null);
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
 
@@ -67,9 +70,9 @@ const Surah = ({ surahData }: Props) => {
                 {text}
                 <span>{convertToArabicNumbers(index + 1)}</span>
 
-                {hoveredAyahIndex === index && surahData.english[index] && (
+                {hoveredAyahIndex === index && translateData.chapter && translateData.chapter[index].text && (
                   <div className="ayahTranslatePopup">
-                    {surahData.english[index]}
+                    {translateData.chapter[index].text}
                   </div>
                 )}
               </div>
