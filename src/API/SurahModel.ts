@@ -1,5 +1,6 @@
 export interface SurahData  {
     surahName: string;
+    surahNameTurkish:string;
     surahNameArabic: string;
     surahNameArabicLong: string;
     surahNameTranslation: string;

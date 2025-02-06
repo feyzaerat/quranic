@@ -13,9 +13,8 @@ const Sidebar = (props: Props) => {
           <p>Al-Faatiha</p>
         </div>
         <div className="sidebar-nav">
-          <Link to="">Surah</Link>
-          <Link to="">Page</Link>
-          <Link to="">Juz</Link>
+          <Link to="">Sûre</Link>
+          <Link to="">Cûz</Link>
         </div>
         <div className="sidebar-search">
           <Form>

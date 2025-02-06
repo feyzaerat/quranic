@@ -16,16 +16,16 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
   return (
     <div className="header">
       <div className="d-flex gap-2 right-header">
-        <p className="surahEnglishName">{surahData.surahNameTranslation}</p>
+        <p className="surahEnglishName">{surahData.surahNameTurkish}</p>
         <select
-          title="Choose Surah"
+          title="Sûre Seç"
           value={surahId}
           onChange={handleSurahChange}
           className="btn SelectBox"
         >
           {Array.from({ length: 114 }, (_, index) => index + 1).map((id) => (
             <option key={id} value={id}>
-              Surah {id}
+               {id}. Sûre
             </option>
           ))}
         </select>
