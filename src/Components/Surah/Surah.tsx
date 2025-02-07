@@ -1,45 +1,87 @@
-import React, { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useRef, useState } from "react";
 import { SurahData } from "../../API/SurahModel";
-import SurahService from "../../API/SurahService";
+import "./surah.css";
+import { ScrollTop } from "..";
+import TranslateData from "../../API/TranslateModel";
 
-const Surah = () => {
-  const [surahData, setSurahData] = useState<SurahData[]>([]);
-  const [loading, setLoading] = useState<boolean>(true);
+type Props = {
+  surahData: SurahData;
+  translateData: TranslateData;
+};
+
+const Surah = ({ surahData, translateData }: Props) => {
+  const [hoveredAyahIndex, setHoveredAyahIndex] = useState<number | null>(null);
+  const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
+
+  const convertToArabicNumbers = (num: number): string => {
+    const arabicNumbers = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
+    return num.toString().replace(/\d/g, (d) => arabicNumbers[parseInt(d)]);
+  };
+
+  const scrollableRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const fetchSurahs = async () => {
-      try {
-        const response = await SurahService.getAllSurah();
-        setSurahData(response);
-        console.log(response);
-      } catch (error) {
-        console.error("API Error:", error);
-        
-      } finally {
-        setLoading(false);
+    if (scrollableRef.current) {
+      scrollableRef.current.scrollTop = 0;
+    }
+
+    const handleScroll = () => {
+      if (scrollableRef.current) {
+        const scrollTopValue = scrollableRef.current.scrollTop;
+        setIsScrollTopVisible(scrollTopValue > 500);
       }
     };
 
-    fetchSurahs();
+    const scrollableDiv = scrollableRef.current;
+    if (scrollableDiv) {
+      scrollableDiv.addEventListener("scroll", handleScroll);
+    }
+
+    return () => {
+      if (scrollableDiv) {
+        scrollableDiv.removeEventListener("scroll", handleScroll);
+      }
+    };
   }, []);
 
   return (
-    <div className="surahList">
-      {loading ? (
-        <p>Loading...</p>
-      ) : (
-        surahData.map((surah) => (
-          <div key={surah.surahNo} className="surahRow">
-            <Link to={`/surah/${surah.surahNo}`}>
-              <span className="surahNumber">{surah.surahNo} - </span>
-              <span className="surahNameEnglish">{surah.surahNameTurkish} </span>
-              <span className="surahNameArabicName">{surah.surahNameArabic} </span>
-            </Link>
+    <>
+      <div
+        className="surah"
+        ref={scrollableRef}
+        style={{
+          display: "flex",
+        }}
+      >
+        {surahData && surahData.arabic1.length > 0 && (
+          <div
+            className="arabic1"
+            style={{ flexDirection: "column-reverse", direction: "rtl" }}
+          >
+            <h2 className="bismillah">بسم الله الرحمن الرحيم</h2>
+            {surahData.arabic1.map((text, index) => (
+              <div
+                key={index}
+                className="ayah"
+                style={{ textAlign: "right", position: "relative" }}
+                onClick={() => setHoveredAyahIndex(index)}
+                onMouseLeave={() => setHoveredAyahIndex(null)}
+              >
+                {text}
+                <span>{convertToArabicNumbers(index + 1)}</span>
+
+                {hoveredAyahIndex === index && translateData.chapter && translateData.chapter[index].text && (
+                  <div className="ayahTranslatePopup">
+                    {translateData.chapter[index].text}
+                  </div>
+                )}
+              </div>
+            ))}
           </div>
-        ))
-      )}
-    </div>
+        )}
+        {isScrollTopVisible && <ScrollTop scrollableRef={scrollableRef} />}
+      </div>
+    </>
   );
 };
 

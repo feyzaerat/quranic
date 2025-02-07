@@ -10,6 +10,7 @@ $colors: (
     "info" : #6aa6ad,
     "disabled" : #e5e4e5,
     "soft-golden" : #dec8a1,
+    "beige" : #faf5f0,
 );
 $hover-colors: (
     "primary" : lighten(#9cbcb7, 10%), 
@@ -21,7 +22,9 @@ $hover-colors: (
     "warning" : darken(#f9c851, 10%), 
     "danger" : darken(#a11d19, 10%), 
     "info" : lighten(#6aa6ad, 10%),   
-    "disabled" : lighten(#e5e4e5, 10%) 
+    "disabled" : lighten(#e5e4e5, 10%),
+    "soft-golden" : lighten(#dec8a1, 10%),
+    "beige" : lighten(faf5f0, 10%),
 );
 
 @function get-color($color-name){
@@ -43,4 +46,6 @@ $hover-colors: (
     --info-color: #{get-color("info")};
     --disabled-color: #{get-color("disabled")};
     --soft-golden-color: #{get-color("soft-golden")};
+    --beige-color: #{get-color("beige")};
+    --beige-hover-color: #{get-hover-color("beige")};
 }

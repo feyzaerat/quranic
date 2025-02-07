@@ -1,0 +1,68 @@
+.layout.list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+.layout .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.layout .content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.layout .content .cardy {
+  background: var(--beige-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  padding: 0.5rem;
+  width: 100%;
+  min-width: 150px;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start;
+  align-items: center;
+  row-gap: 0.25rem;
+  border-bottom: 2px solid var(--primary-color);
+  border-radius: 0.5rem;
+}
+.layout .content .cardy__title p {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 16px;
+  font-weight: 700;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 0.25rem;
+  font-family: var(--font-waterfall);
+}
+.layout .content .cardy__title p span {
+  color: var(--primary-color);
+  filter: contrast(25%);
+  font-size: 14px;
+}
+.layout .content .cardy__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: last baseline;
+  row-gap: 0.25rem;
+}
+.layout .content .cardy__content p {
+  font-size: 11px;
+  line-height: 14px;
+  margin-bottom: 0;
+  color: var(--dark-color);
+}
+.layout .content .cardy__content p span {
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.layout .content .cardy:hover {
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  background: var(--beige-hover-color);
+  transform: scale(1.025);
+}/*# sourceMappingURL=surahList.css.map */

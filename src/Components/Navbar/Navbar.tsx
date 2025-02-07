@@ -27,19 +27,25 @@ function Navy() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Nav.Link href="#action1">Home</Nav.Link>
-            <Nav.Link href="#action2">Surah</Nav.Link>
-            <Nav.Link href="#action3">Cuz</Nav.Link>
+            <Nav.Link href="/">Anasayfa</Nav.Link>
+            <Nav.Link href="/surah">Sûreler</Nav.Link>
+            <Nav.Link href="#action3">Cûzler</Nav.Link>
+            <Nav.Link href="#action3">Namaz Vakitleri</Nav.Link>
+            <Nav.Link href="#action3">Hadisler</Nav.Link>
+            <Nav.Link href="#action3">Hakkımızda</Nav.Link>
          
           </Nav>
 
           <NavDropdown className="right-nav-circle" title={<IoColorPaletteOutline />}>
-          <NavDropdown.Item onClick={() => (handleThemeChange("light"))}>Light</NavDropdown.Item>
-          <NavDropdown.Item onClick={() => (handleThemeChange("dark"))}>Dark</NavDropdown.Item>
+          <NavDropdown.Item onClick={() => (handleThemeChange("light"))}>Açık</NavDropdown.Item>
+          <NavDropdown.Item onClick={() => (handleThemeChange("dark"))}>Koyu</NavDropdown.Item>
           <NavDropdown.Item onClick={() => (handleThemeChange("soft"))}>Soft</NavDropdown.Item>
           </NavDropdown>
-          <Nav.Link className="right-nav-circle" href="#action10"><FaRegUser />
-          </Nav.Link>
+          <NavDropdown className="right-nav-circle" title={<FaRegUser />}> 
+          <NavDropdown.Item onClick={() => (handleThemeChange("light"))}>Profil</NavDropdown.Item>
+          <NavDropdown.Item onClick={() => (handleThemeChange("dark"))}>Ayarlar</NavDropdown.Item>
+          <NavDropdown.Item onClick={() => (handleThemeChange("soft"))}>Çıkış Yap</NavDropdown.Item>
+          </NavDropdown>
         </Navbar.Collapse>
       </Container>
     </Navbar>
