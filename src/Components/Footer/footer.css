@@ -1,0 +1,10 @@
+.layout {
+  overflow: hidden;
+  max-width: -webkit-fill-available;
+}
+.layout.footer {
+  background: var(--white-color);
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}/*# sourceMappingURL=footer.css.map */

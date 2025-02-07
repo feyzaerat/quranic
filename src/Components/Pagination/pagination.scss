@@ -6,11 +6,13 @@
   column-gap: 0.0025rem;
   background: transparent;
   padding: 0.25rem;
+  
   a {
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     color: var(--primary-color);
-    font-size: 12px;
+    font-size: 16px;
     padding: 0.25rem 1rem;
+    width: 180px;
     
     
     &:first-child {
@@ -22,6 +24,7 @@
     &:nth-child(2){
         background: transparent;
         border-radius: 0;
+        cursor: default;
         
     }
     &:last-child {

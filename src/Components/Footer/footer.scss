@@ -1,0 +1,10 @@
+.layout{
+    overflow: hidden;
+    max-width: -webkit-fill-available;
+    &.footer{
+        background: var(--white-color);
+        width: 100%;
+        position: fixed;
+        bottom: 0;
+    }
+}

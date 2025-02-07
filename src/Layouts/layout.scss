@@ -20,10 +20,9 @@
 
     .page {
       width: 100%;
-
-
-
- 
+      height: -webkit-fill-available;
+      /* max-height: 50vh; */
+      min-height: 77vh;
     }
   }
 }

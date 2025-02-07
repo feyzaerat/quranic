@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import Router from "../Routers/Router";
-import { Navbar, Sidebar } from "../Components";
+import { Footer, Navbar, Sidebar } from "../Components";
 import "./layout.css";
 type Props = {};
 
@@ -11,7 +11,11 @@ const MainLayout = (props: Props) => {
       <Navbar />
       <div className="main-layout">
         <Sidebar />
+        <div>
         <Router/>
+        <Footer/>
+        </div>
+        
       </div>
      
     </>

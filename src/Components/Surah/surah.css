@@ -1,5 +1,5 @@
 .bismillah {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--secondary-color);
   font-family: cursive;
   margin-right: 0.25rem;
@@ -15,7 +15,7 @@
   justify-content: flex-end;
   flex-wrap: wrap;
   row-gap: 1.25rem;
-  font-size: 1.75rem;
+  font-size: 2.75rem;
   text-align: right;
   font-family: serif;
   padding: 1rem 0.5rem;
@@ -23,8 +23,9 @@
   height: 100%;
   overflow-x: hidden;
   overflow-y: scroll;
-  max-height: 70vh;
-  margin-bottom: 0.25rem;
+  max-height: 67vh;
+  min-height: 67vh;
+  margin-bottom: 1.25rem;
 }
 .surah div {
   max-width: 100%;
@@ -37,7 +38,7 @@
   direction: rtl;
   unicode-bidi: isolate;
   vertical-align: middle;
-  line-height: 2.75rem;
+  line-height: 3.75rem;
   cursor: pointer;
 }
 .surah div .ayah:hover {
@@ -46,15 +47,15 @@
 }
 .surah div .ayah span {
   position: relative;
-  top: -0.2rem;
+  top: -0.5rem;
   display: inline-flex;
   justify-content: center;
   align-items: center;
   margin: 0 0.25rem 0 0.75rem;
   color: var(--secondary-color);
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   font-size: 0.5rem;
   font-weight: 600;
   font-family: serif;

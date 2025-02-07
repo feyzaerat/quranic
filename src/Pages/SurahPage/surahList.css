@@ -71,6 +71,7 @@
   justify-content: flex-start;
   align-items: last baseline;
   row-gap: 0.25rem;
+  min-height: 78vh;
 }
 .layout .content .cardy__content p {
   font-size: 14px;

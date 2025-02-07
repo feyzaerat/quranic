@@ -35,6 +35,7 @@
     overflow-y: scroll;
     height: 100%;
     max-height: 78vh;
+    
     overflow-x: hidden;
 
     .cardy {
@@ -75,6 +76,7 @@
         justify-content: flex-start;
         align-items: last baseline;
         row-gap: 0.25rem;
+        min-height: 78vh;
         p {
           font-size: 14px;
           line-height: 16px;

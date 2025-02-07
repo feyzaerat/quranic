@@ -11,8 +11,9 @@
 .pagination a {
   box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
   color: var(--primary-color);
-  font-size: 12px;
+  font-size: 16px;
   padding: 0.25rem 1rem;
+  width: 180px;
 }
 .pagination a:first-child {
   border-top-left-radius: 0.5rem;
@@ -23,6 +24,7 @@
 .pagination a:nth-child(2) {
   background: transparent;
   border-radius: 0;
+  cursor: default;
 }
 .pagination a:last-child {
   border-top-right-radius: 0.5rem;
