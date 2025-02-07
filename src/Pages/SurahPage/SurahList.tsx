@@ -39,7 +39,7 @@ const SurahList = (props: Props) => {
 
   return (
     <div className="layout list">
-      <div className="header w-100 d-flex">
+      <div className="header frame d-flex">
         <p>Sureler</p>
       </div>
       <div className="content">

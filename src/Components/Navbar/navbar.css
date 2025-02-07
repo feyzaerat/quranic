@@ -7,17 +7,24 @@
   font-family: var(--font-waterfall);
   font-weight: 600;
   margin-top: -0.75rem;
-  margin-left: 0.5rem;
-  font-size: 28px;
+  margin-left: 1.5rem;
+  font-size: 48px;
+}
+.navbar-layout .navbar-collapse {
+  padding-left: 12rem;
+}
+.navbar-layout .navbar-collapse .navbar-nav a {
+  font-size: 20px;
 }
 .navbar-layout .right-nav-circle {
+  padding-right: 1.5rem;
   margin: 0 0.5rem;
   color: var(--primary-color) !important;
   background: transparent !important;
   padding: 0 !important;
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  width: 48px;
+  height: 48px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,9 +37,9 @@
   box-shadow: var(--primary-color) -2px 4px 2px 0px, var(--light-color) 4px -2px 6px 0px;
   transition: 0.5s ease-in-out;
 }
-.navbar-layout .right-nav-circle:first-child {
-  font-size: 18px !important;
+.navbar-layout .right-nav-circle:nth-child(2) {
+  font-size: 20px !important;
 }
 .navbar-layout .right-nav-circle:last-child {
-  font-size: 13px !important;
+  font-size: 18px !important;
 }/*# sourceMappingURL=navbar.css.map */

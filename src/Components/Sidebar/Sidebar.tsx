@@ -9,9 +9,6 @@ const Sidebar = (props: Props) => {
   return (
     <div className="layout sidebar">
       <div className="sidebar-header">
-        <div className="title">
-          <p>Al-Faatiha</p>
-        </div>
         <div className="sidebar-nav">
           <Link to="">Sûre</Link>
           <Link to="">Cûz</Link>

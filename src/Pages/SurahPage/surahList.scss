@@ -2,35 +2,60 @@
   &.list {
     display: flex;
     flex-direction: column;
-    row-gap: 1rem;
+    justify-content: center !important;
+    align-items: center !important;
+    row-gap: 0.25rem;
   }
   .header {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    &.frame {
+      margin: 0 1rem !important;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 40px;
+      font-weight: 700;
+      font-family: var(--font-waterfall);
+      width: -webkit-fill-available;
+      background-image: url(../../styles/header-frame11.png);
+      background-size: 420px;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-color: inherit;
+      border: none;
+      background-blend-mode: luminosity;
+    }
   }
   .content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 1rem;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem 2rem;
+    overflow-y: scroll;
+    height: 100%;
+    max-height: 78vh;
+    overflow-x: hidden;
+
     .cardy {
       background: var(--beige-color);
       box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
       padding: 0.5rem;
       width: 100%;
-      min-width: 150px;
+      min-width: 210px;
+      max-width: 210px;
       display: flex !important;
       flex-direction: column !important;
       justify-content: flex-start;
       align-items: center;
-      row-gap: 0.25rem;
+      row-gap: 0.5rem;
       border-bottom: 2px solid var(--primary-color);
       border-radius: 0.5rem;
       &__title {
         p {
           margin-bottom: 0;
-          font-size: 18px;
-          line-height: 16px;
+          font-size: 28px;
+          line-height: 30px;
           font-weight: 700;
           display: flex;
           flex-direction: row;
@@ -40,7 +65,7 @@
           span {
             color: var(--primary-color);
             filter: contrast(25%);
-            font-size: 14px;
+            font-size: 16px;
           }
         }
       }
@@ -51,8 +76,8 @@
         align-items: last baseline;
         row-gap: 0.25rem;
         p {
-          font-size: 11px;
-          line-height: 14px;
+          font-size: 14px;
+          line-height: 16px;
           margin-bottom: 0;
           color: var(--dark-color);
           span {
