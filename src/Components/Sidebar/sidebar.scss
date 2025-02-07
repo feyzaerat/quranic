@@ -81,13 +81,19 @@
       a {
         font-size: 14px;
         line-height: 28px;
+        margin: 0 0.5rem;
 
         .surahNumber {
           color: var(--primary-color);
         }
         .surahNameArabicName {
+          font-size: 18px;
+          line-height: 32px;
           font-family: serif;
           color: var(--primary-color);
+        }
+        span {
+          margin: 0 0.25rem;
         }
       }
     }

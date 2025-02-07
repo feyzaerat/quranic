@@ -7,6 +7,12 @@
   margin: 0 1rem auto;
   gap: 0.5rem;
   height: auto;
+  .content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
 
   .layout {
     background: var(--white-color);

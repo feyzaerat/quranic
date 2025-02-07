@@ -11,7 +11,7 @@ const MainLayout = (props: Props) => {
       <Navbar />
       <div className="main-layout">
         <Sidebar />
-        <div>
+        <div className="content">
         <Router/>
         <Footer/>
         </div>

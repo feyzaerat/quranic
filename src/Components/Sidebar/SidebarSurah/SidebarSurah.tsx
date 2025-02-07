@@ -29,10 +29,10 @@ const Surah = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        surahData.map((surah) => (
+        surahData.map((surah, index) => (
           <div key={surah.surahNo} className="surahRow">
-            <Link to={`/surah/${surah.surahNo}`}>
-              <span className="surahNumber">{surah.surahNo} - </span>
+            <Link to={`/surah/${index+1}`}>
+              <span className="surahNumber">{index+1} - </span>
               <span className="surahNameEnglish">{surah.surahNameTurkish} </span>
               <span className="surahNameArabicName">{surah.surahNameArabic} </span>
             </Link>
