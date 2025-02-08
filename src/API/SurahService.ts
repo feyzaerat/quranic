@@ -13,6 +13,7 @@ class SurahService {
           ...surah,
           surahNameTurkish: turkishName ? turkishName.turkishName : "Çeviri Bulunamadı",
           juzNumbers: juzNumbers,
+          
         };
       });
 

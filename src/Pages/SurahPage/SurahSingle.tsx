@@ -5,6 +5,7 @@ import SurahService from "../../API/SurahService";
 import TranslateService from "../../API/TranslateService";
 import TranslateData from "../../API/TranslateModel";
 import { useNavigate, useParams } from "react-router-dom";
+import SurahList from "./SurahList";
 
 const SurahSingle = () => {
   const navigate = useNavigate();
@@ -44,6 +45,7 @@ const SurahSingle = () => {
             surahId={validSurahId}
             setSurahId={(id) => navigate(`/surah/${id}`)}
             surahData={surahData}
+           
           />
           {translateData && (
             <Surah surahData={surahData} translateData={translateData} />

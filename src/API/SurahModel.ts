@@ -1,3 +1,10 @@
+
+export interface SurahAudio {
+  reciter: string;
+  url: string;
+  originalUrl: string;
+}
+
 export interface SurahData {
   id: number;
   surahName: string;
@@ -11,4 +18,5 @@ export interface SurahData {
   surahNo: number;
   english: string[];
   arabic1: string[];
+  audio: Record<string, SurahAudio>;
 }

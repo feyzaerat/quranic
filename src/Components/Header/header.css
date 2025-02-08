@@ -12,10 +12,25 @@
 .header p {
   margin-bottom: 0;
 }
-.header .right-header {
+.header audio {
+  height: 40px;
+}
+.header audio::-webkit-media-controls-play-button {
+  background-color: var(--primary-color) !important;
+  border-radius: 50%;
+}
+.header audio::-webkit-media-controls-volume-slider {
+  background-color: transparent;
+}
+.header audio::-webkit-media-controls-mute-button {
+  background-color: var(--white-color) !important;
+  border-radius: 50%;
+}
+.header .right-header, .header .left-header {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 1rem;
 }
 .header .surahEnglishName,
 .header .surahArabicLongName,
@@ -29,4 +44,13 @@
   font-size: 20px;
   font-weight: 500;
   letter-spacing: 0.05rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+.header .surahArabicLongName svg {
+  margin-top: -0.5rem;
+  color: var(--primary-color);
 }/*# sourceMappingURL=header.css.map */
