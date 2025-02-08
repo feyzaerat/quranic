@@ -2,6 +2,7 @@ export interface SurahData {
   id: number;
   surahName: string;
   surahNameTurkish: string;
+  juzNumbers: number[];
   surahNameArabic: string;
   surahNameArabicLong: string;
   surahNameTranslation: string;

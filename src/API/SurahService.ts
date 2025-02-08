@@ -7,9 +7,12 @@ class SurahService {
     return quranApi.get<SurahData[]>("surah.json").then((response) => {
       const surahsWithTurkishNames = response.data.map((surah, index) => {
         const turkishName = TurkishNameAPI[index];
+        const juzNumbers = turkishName ? turkishName.juzNo : []; 
+
         return {
           ...surah,
           surahNameTurkish: turkishName ? turkishName.turkishName : "Çeviri Bulunamadı",
+          juzNumbers: juzNumbers,
         };
       });
 
