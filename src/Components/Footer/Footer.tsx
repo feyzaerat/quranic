@@ -1,11 +1,25 @@
-import React from 'react'
-import "./footer.css"
-type Props = {}
+import React from "react";
+import "./footer.css";
+import { Link } from "react-router-dom";
+type Props = {};
 
 const Footer = (props: Props) => {
+  const currentYear = new Date().getFullYear();
   return (
-    <div className='layout footer'>Footer</div>
-  )
-}
+    <div className="layout footer">
+      <p>
+        &copy; {currentYear}{" "}
+        <Link
+          to="https://feyzaerat.com.tr"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          FKE Software.
+        </Link>{" "}
+        All rights reserved.
+      </p>
+    </div>
+  );
+};
 
-export default Footer
+export default Footer;
