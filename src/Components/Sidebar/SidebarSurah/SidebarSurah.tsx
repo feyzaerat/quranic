@@ -3,7 +3,10 @@ import { Link } from "react-router-dom";
 import { SurahData } from "../../../API/SurahModel";
 import SurahService from "../../../API/SurahService";
 
-const Surah = () => {
+type Props = {
+  searchSurah: string;
+};
+const Surah = ({ searchSurah }: Props) => {
   const [surahData, setSurahData] = useState<SurahData[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
 
@@ -14,7 +17,6 @@ const Surah = () => {
         setSurahData(response);
       } catch (error) {
         console.error("API Error:", error);
-        
       } finally {
         setLoading(false);
       }
@@ -23,17 +25,33 @@ const Surah = () => {
     fetchSurahs();
   }, []);
 
+  const normalizeTurkishChars = (str: string) => {
+    return str
+      .replace(/[ıİ]/g, "i")
+      .replace(/[î]/g, "i")
+      .replace(/[â]/g, "a")
+      .replace(/[û]/g, "u")
+  };
+  const filteredSurahData = surahData?.filter((surah) =>
+    normalizeTurkishChars(surah.surahNameTurkish)
+      .toLowerCase()
+      .includes(normalizeTurkishChars(searchSurah).toLowerCase())
+  );
   return (
     <div className="surahList">
       {loading ? (
         <p>Loading...</p>
       ) : (
-        surahData.map((surah, index) => (
+        filteredSurahData.map((surah, index) => (
           <div key={surah.surahNo} className="surahRow">
-            <Link to={`/surah/${index+1}`}>
-              <span className="surahNumber">{index+1} - </span>
-              <span className="surahNameEnglish">{surah.surahNameTurkish} </span>
-              <span className="surahNameArabicName">{surah.surahNameArabic} </span>
+            <Link to={`/surah/${index + 1}`}>
+              <span className="surahNumber">{index + 1} - </span>
+              <span className="surahNameEnglish">
+                {surah.surahNameTurkish}{" "}
+              </span>
+              <span className="surahNameArabicName">
+                {surah.surahNameArabic}{" "}
+              </span>
             </Link>
           </div>
         ))

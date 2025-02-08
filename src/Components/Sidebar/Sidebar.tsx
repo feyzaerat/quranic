@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "./sidebar.css";
 import Surah from "./SidebarSurah/SidebarSurah";
@@ -6,6 +6,11 @@ import { Form } from "react-bootstrap";
 type Props = {};
 
 const Sidebar = (props: Props) => {
+  const [searchSurah, setSearchSurah] = useState("");
+
+  const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setSearchSurah(event.target.value);
+  }
   return (
     <div className="layout sidebar">
       <div className="sidebar-header">
@@ -16,14 +21,19 @@ const Sidebar = (props: Props) => {
         <div className="sidebar-search">
           <Form>
             <Form.Group className="" controlId="formBasicSearch">
-              <Form.Control type="text" placeholder="Search .." />
+              <Form.Control 
+              type="text" 
+              placeholder="Search .." 
+              value={searchSurah}
+              onChange={handleSearchChange}
+              />
             </Form.Group>
           </Form>
         </div>
       </div>
 
       <div className="sidebar-content">
-        <Surah />
+        <Surah searchSurah={searchSurah} />
       </div>
     </div>
   );
