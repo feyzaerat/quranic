@@ -47,15 +47,28 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         outline: none !important;
+        outline-color: transparent!important;
+        outline-width: 0!important;
+        outline-style: none!important;
         border: 2px solid var(--primary-color);
-        ::placeholder {
+      
+        &::placeholder {
           font-size: 14px;
         }
-        :active {
-          border: none !important;
-          border-color: transparent !important;
+      
+        &:active,
+        &:focus {
+          border: 2px solid transparent !important;
+          outline: none !important;
+          outline-color: transparent!important;
+          outline-width: 0!important;
+          outline-style: none!important;
+          box-shadow: none!important;
+          background: var(--light-color);
+          
         }
       }
+
     }
   }
 

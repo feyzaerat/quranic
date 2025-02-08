@@ -47,5 +47,6 @@ $hover-colors: (
     --disabled-color: #{get-color("disabled")};
     --soft-golden-color: #{get-color("soft-golden")};
     --beige-color: #{get-color("beige")};
+    --primary-hover-color: #{get-hover-color("primary")};
     --beige-hover-color: #{get-hover-color("beige")};
 }
