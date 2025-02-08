@@ -12,7 +12,6 @@ const Surah = () => {
       try {
         const response = await SurahService.getAllSurah();
         setSurahData(response);
-        console.log(response);
       } catch (error) {
         console.error("API Error:", error);
         

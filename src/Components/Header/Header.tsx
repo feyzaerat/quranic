@@ -1,6 +1,7 @@
 import React from "react";
 import { SurahData } from "../../API/SurahModel";
-import "./header.css"
+import "./header.css";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   surahId: number;
@@ -9,8 +10,9 @@ type Props = {
 };
 
 const Header = ({ surahId, setSurahId, surahData }: Props) => {
+  const navigate = useNavigate();
   const handleSurahChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    setSurahId(Number(event.target.value));
+    navigate(`/surah/${event.target.value}`);
   };
 
   return (
@@ -25,7 +27,7 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
         >
           {Array.from({ length: 114 }, (_, index) => index + 1).map((id) => (
             <option key={id} value={id}>
-               {id}. Sûre
+              {id}. Sûre
             </option>
           ))}
         </select>

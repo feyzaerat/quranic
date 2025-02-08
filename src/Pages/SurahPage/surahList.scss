@@ -26,7 +26,7 @@
     }
   }
   .content {
-    display: grid;
+    display: grid!important;
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@
         justify-content: flex-start;
         align-items: last baseline;
         row-gap: 0.25rem;
-        min-height: 78vh;
+        //min-height: 78vh;
         p {
           font-size: 14px;
           line-height: 16px;

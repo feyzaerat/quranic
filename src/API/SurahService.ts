@@ -6,11 +6,10 @@ class SurahService {
   getAllSurah() {
     return quranApi.get<SurahData[]>("surah.json").then((response) => {
       const surahsWithTurkishNames = response.data.map((surah, index) => {
-        console.log(surah); 
-        const turkishName = TurkishNameAPI[index]; 
+        const turkishName = TurkishNameAPI[index];
         return {
           ...surah,
-          surahNameTurkish: turkishName ? turkishName.turkishName : "N/A",
+          surahNameTurkish: turkishName ? turkishName.turkishName : "Çeviri Bulunamadı",
         };
       });
 
@@ -28,7 +27,7 @@ class SurahService {
 
     return {
       ...data,
-      surahNameTurkish: turkishNameData ? turkishNameData.turkishName : "N/A",
+      surahNameTurkish: turkishNameData ? turkishNameData.turkishName : "Çeviri Bulunamadı",
     };
   }
 }
