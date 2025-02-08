@@ -6,6 +6,8 @@ import SurahService from "../../API/SurahService";
 import TranslateData from "../../API/TranslateModel";
 import TranslateService from "../../API/TranslateService";
 import TurkishNameAPI from "../../API/TurkishNameAPI";
+import { Link } from "react-router-dom";
+import { FaAnglesRight } from "react-icons/fa6";
 
 type Props = {};
 
@@ -73,6 +75,15 @@ const SurahList = (props: Props) => {
                 <p>
                   <span>Ayet Sayısı :</span> {surah.totalAyah}
                 </p>
+                <Link
+                  className="btn w-100"
+                  to={`/surah/${index + 1}`}
+                  title="OKU"
+                >
+                  <span>
+                    <FaAnglesRight />
+                  </span>
+                </Link>
               </div>
             </div>
           ))

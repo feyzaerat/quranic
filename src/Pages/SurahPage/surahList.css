@@ -82,6 +82,37 @@
   color: var(--primary-color);
   font-weight: 600;
 }
+.layout .content .cardy__content a.btn {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  background: transparent;
+  color: var(--primary-color);
+  font-weight: 700;
+}
+.layout .content .cardy__content a.btn span {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+.layout .content .cardy__content a.btn:hover span {
+  animation: leftToRight 1s ease-in-out infinite;
+  transform: scale(1.5);
+}
+@keyframes leftToRight {
+  0% {
+    transform: translateX(100%) scale(1);
+  }
+  50% {
+    transform: translateX(50%) scale(1.5);
+  }
+  100% {
+    transform: translateX(100%) scale(1.25);
+  }
+}
 .layout .content .cardy:hover {
   transition: 0.5s ease-in-out;
   cursor: pointer;

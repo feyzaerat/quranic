@@ -26,7 +26,7 @@
     }
   }
   .content {
-    display: grid!important;
+    display: grid !important;
     grid-template-columns: repeat(6, 1fr);
     justify-content: center;
     align-items: center;
@@ -35,7 +35,7 @@
     overflow-y: scroll;
     height: 100%;
     max-height: 78vh;
-    
+
     overflow-x: hidden;
 
     .cardy {
@@ -85,6 +85,40 @@
           span {
             color: var(--primary-color);
             font-weight: 600;
+          }
+        }
+        a {
+          &.btn {
+            position: relative;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            column-gap: 1rem;
+            background: transparent;
+            color: var(--primary-color);
+            font-weight: 700;
+            span {
+              display: inline-block;
+              transition: transform 0.3s ease;
+            }
+            &:hover {
+              span {
+                animation: leftToRight 1s ease-in-out infinite;
+                transform: scale(1.5);
+              }
+            }
+          }
+        }
+        @keyframes leftToRight {
+          0% {
+            transform: translateX(100%) scale(1);
+          }
+          50% {
+            transform: translateX(50%) scale(1.5);
+          }
+          100% {
+            transform: translateX(100%) scale(1.25);
           }
         }
       }
