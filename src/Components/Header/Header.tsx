@@ -3,7 +3,8 @@ import { SurahData } from "../../API/SurahModel";
 import "./header.css";
 import { useNavigate } from "react-router-dom";
 import { GiVineFlower } from "react-icons/gi";
-<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />;
+
+
 type Props = {
   surahId: number;
   setSurahId: (id: number) => void;
@@ -34,7 +35,7 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
   };
 
   const handleReciterChange = (event: React.ChangeEvent<HTMLSelectElement>) => {
-    const reciterId = parseInt(event.target.value, 1);
+    const reciterId = parseInt(event.target.value, 10);
     setSelectedReciter(reciterId);
   };
 
@@ -42,14 +43,14 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
     <div className="header">
       <div className="d-flex gap-2 right-header">
         <select
-          title="Okuyucu Seç"
+          title="OKUYUCU"
           value={selectedReciter}
           onChange={handleReciterChange}
-          className="btn SelectBox"
+          className="btn selectBox form-select "
         >
           {Object.keys(surahData.audio).map((reciterId) => (
-            <option key={reciterId} value={reciterId}>
-              {surahData.audio[parseInt(reciterId)].reciter}
+            <option className="d" key={reciterId} value={reciterId}>
+             {surahData.audio[parseInt(reciterId)].reciter}
             </option>
           ))}
         </select>

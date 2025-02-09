@@ -42,14 +42,6 @@
     }
   }
 
-  .surahEnglishName,
-  .surahArabicLongName,
-  .SelectBox {
-    font-family: serif;
-    margin-bottom: 0;
-    font-size: 16px;
-    font-weight: 600;
-  }
   .surahArabicLongName {
     font-size: 20px;
     font-weight: 500;
@@ -63,6 +55,27 @@
       transition: transform 0.3s ease;
       margin-top: -0.5rem;
       color: var(--primary-color);
+    }
+  }
+  .selectBox {
+    border: none;
+    background: var(--white-color) !important;
+    outline: none;
+    background: transparent;
+    max-width: 200px;
+    font-family: serif;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-weight: 600;
+    appearance: none !important;
+    text-align: left;
+    &:focus {
+      border-color: var(--primary-color);
+      outline: none;
+    }
+    &:checked {
+      background-color: var(--primary-color) !important;
+      color: var(--white-color) !important;
     }
   }
 }
