@@ -1,9 +1,8 @@
 .navbar-layout {
-  background: var(--white-color) !important;
+  background: var(--layout-bg-color) !important;
   font-size: 14px;
 }
 .navbar-layout .navbar-brand {
-  color: var(--primary-color);
   font-family: var(--font-waterfall);
   font-weight: 600;
   margin-top: -0.75rem;
@@ -15,6 +14,7 @@
 }
 .navbar-layout .navbar-collapse .navbar-nav a {
   font-size: 20px;
+  color: var(--text-color);
 }
 .navbar-layout .right-nav-circle {
   padding-right: 1.5rem;
@@ -31,7 +31,7 @@
   align-content: center;
   text-align: center;
   vertical-align: middle;
-  box-shadow: var(--primary-color) 4px 2px 2px 0px, var(--disabled-color) 4px -2px 6px 0px;
+  box-shadow: var(--shadow_primary) 4px 2px 2px 0px, var(--beige-hover-color) 4px -2px 6px 0px;
 }
 .navbar-layout .right-nav-circle:hover {
   box-shadow: var(--primary-color) -2px 4px 2px 0px, var(--light-color) 4px -2px 6px 0px;

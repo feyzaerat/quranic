@@ -15,7 +15,7 @@
   }
 
   .layout {
-    background: var(--white-color);
+    background: var(--layout-bg-color)!important;
     display: flex;
     flex-direction: column;
     justify-content: start;

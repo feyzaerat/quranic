@@ -19,7 +19,7 @@ function Navy() {
   return (
     <Navbar expand="lg" className={`navbar-layout ${theme}`}>
       <Container fluid>
-        <Navbar.Brand href="#">Erat Qurânî</Navbar.Brand>
+        <Navbar.Brand href="#" className="colorful-text">Erat Qurânî</Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav

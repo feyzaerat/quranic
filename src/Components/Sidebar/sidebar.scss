@@ -10,6 +10,7 @@
   padding: 0 !important;
   position: relative;
   bottom: 0;
+  background: var(--bg-color);
   .sidebar-header {
     background: transparent;
     width: 100%;
@@ -22,7 +23,6 @@
     justify-content: center;
     align-items: center;
     gap: 0;
-
     .sidebar-nav {
       width: 100%;
       display: flex;
@@ -49,28 +49,30 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
         outline: none !important;
-        outline-color: transparent!important;
-        outline-width: 0!important;
-        outline-style: none!important;
+        outline-color: transparent !important;
+        outline-width: 0 !important;
+        outline-style: none !important;
         border: 2px solid var(--primary-color);
-      
+        color: var(--text-color);
+        background-color: var(--layout-bg-color);
+
         &::placeholder {
           font-size: 14px;
+          color: var(--text-color);
         }
-      
+
         &:active,
         &:focus {
           border: 2px solid transparent !important;
           outline: none !important;
-          outline-color: transparent!important;
-          outline-width: 0!important;
-          outline-style: none!important;
-          box-shadow: none!important;
-          background: var(--light-color);
-          
+          outline-color: transparent !important;
+          outline-width: 0 !important;
+          outline-style: none !important;
+          box-shadow: none !important;
+          background: var(--bg-color);
+          color: var(--dark-text);
         }
       }
-
     }
   }
 
@@ -87,25 +89,25 @@
         transition: 0.5s ease-in-out;
         border-radius: 0.5rem;
         padding: 0 1rem;
-        color: var(--white-color);
-        .surahNumber,
-        .surahNameArabicName {
-          color: var(--white-color);
+        color: var(--light-text);
+        .surahNameArabicName,
+        .surahNumber {
+          color: var(--light-text);
         }
       }
       a {
         font-size: 14px;
         line-height: 28px;
         margin: 0 0.5rem;
-
-        .surahNumber {
-          color: var(--primary-color);
+        color: var(--text-color);
+        &:hover {
+          color: var(--light-text);
         }
+
         .surahNameArabicName {
           font-size: 18px;
           line-height: 32px;
           font-family: serif;
-          color: var(--primary-color);
         }
         span {
           margin: 0 0.25rem;

@@ -53,7 +53,7 @@ const SurahList = (props: Props) => {
   return (
     <div className="layout list">
       <div className="header frame d-flex">
-        <p>Sureler</p>
+        <p className="dark-text">Sureler</p>
       </div>
       <div className="content">
         {loading ? (
@@ -62,7 +62,7 @@ const SurahList = (props: Props) => {
           surahData?.map((surah, index) => {
             return (
               <div key={index + 1} className="cardy">
-                <div className="cardy__title">
+                <div className="cardy__title dark-text ">
                   <p>
                     <span>
                       <GiVineFlower />
@@ -75,11 +75,11 @@ const SurahList = (props: Props) => {
                 </div>
                 <div className="cardy__content">
                   <p>
-                    <span>Sûre : </span>
+                    <span className="colorful-text">Sûre : </span>
                     {index + 1}. Sûre
                   </p>
                   <p>
-                    <span>Cüz : </span>
+                    <span className="colorful-text">Cüz : </span>
                     {surah.juzNumbers.length > 0 ? (
                       surah.juzNumbers.map((cuz, idx) => (
                         <b key={idx}>
@@ -92,11 +92,11 @@ const SurahList = (props: Props) => {
                     )}
                   </p>
                   <p>
-                    <span>İndirildiği Yer :</span>{" "}
+                    <span className="colorful-text">İndirildiği Yer :</span>{" "}
                     {getRevelationPlace(surah.revelationPlace)}
                   </p>
                   <p>
-                    <span>Ayet Sayısı :</span> {surah.totalAyah}
+                    <span className="colorful-text">Ayet Sayısı :</span> {surah.totalAyah}
                   </p>
                   <Link
                     className="btn w-100"

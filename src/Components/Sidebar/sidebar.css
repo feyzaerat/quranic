@@ -10,6 +10,7 @@
   padding: 0 !important;
   position: relative;
   bottom: 0;
+  background: var(--bg-color);
 }
 .sidebar .sidebar-header {
   background: transparent;
@@ -56,12 +57,16 @@
   outline-width: 0 !important;
   outline-style: none !important;
   border: 2px solid var(--primary-color);
+  color: var(--text-color);
+  background-color: var(--layout-bg-color);
 }
 .sidebar .sidebar-header .sidebar-search input::-moz-placeholder {
   font-size: 14px;
+  color: var(--text-color);
 }
 .sidebar .sidebar-header .sidebar-search input::placeholder {
   font-size: 14px;
+  color: var(--text-color);
 }
 .sidebar .sidebar-header .sidebar-search input:active, .sidebar .sidebar-header .sidebar-search input:focus {
   border: 2px solid transparent !important;
@@ -70,7 +75,8 @@
   outline-width: 0 !important;
   outline-style: none !important;
   box-shadow: none !important;
-  background: var(--light-color);
+  background: var(--bg-color);
+  color: var(--dark-text);
 }
 .sidebar .sidebar-content {
   width: 100%;
@@ -85,25 +91,25 @@
   transition: 0.5s ease-in-out;
   border-radius: 0.5rem;
   padding: 0 1rem;
-  color: var(--white-color);
+  color: var(--light-text);
 }
-.sidebar .sidebar-content .surahRow:hover .surahNumber,
-.sidebar .sidebar-content .surahRow:hover .surahNameArabicName {
-  color: var(--white-color);
+.sidebar .sidebar-content .surahRow:hover .surahNameArabicName,
+.sidebar .sidebar-content .surahRow:hover .surahNumber {
+  color: var(--light-text);
 }
 .sidebar .sidebar-content .surahRow a {
   font-size: 14px;
   line-height: 28px;
   margin: 0 0.5rem;
+  color: var(--text-color);
 }
-.sidebar .sidebar-content .surahRow a .surahNumber {
-  color: var(--primary-color);
+.sidebar .sidebar-content .surahRow a:hover {
+  color: var(--light-text);
 }
 .sidebar .sidebar-content .surahRow a .surahNameArabicName {
   font-size: 18px;
   line-height: 32px;
   font-family: serif;
-  color: var(--primary-color);
 }
 .sidebar .sidebar-content .surahRow a span {
   margin: 0 0.25rem;

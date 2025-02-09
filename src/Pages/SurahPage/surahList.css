@@ -49,6 +49,13 @@
   border-bottom: 2px solid var(--primary-color);
   border-radius: 0.5rem;
 }
+.layout .content .cardy:hover {
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+  background: var(--beige-hover-color);
+  transform: scale(1.025);
+  color: var(--text-color);
+}
 .layout .content .cardy__title p {
   margin-bottom: 0;
   font-size: 28px;
@@ -61,7 +68,6 @@
   font-family: var(--font-waterfall);
 }
 .layout .content .cardy__title p span {
-  color: var(--primary-color);
   filter: contrast(25%);
   font-size: 16px;
 }
@@ -76,7 +82,7 @@
   font-size: 14px;
   line-height: 16px;
   margin-bottom: 0;
-  color: var(--dark-color);
+  color: var(--text-color);
 }
 .layout .content .cardy__content p span {
   color: var(--primary-color);
@@ -112,10 +118,4 @@
   100% {
     transform: translateX(100%) scale(1.25);
   }
-}
-.layout .content .cardy:hover {
-  transition: 0.5s ease-in-out;
-  cursor: pointer;
-  background: var(--beige-hover-color);
-  transform: scale(1.025);
 }/*# sourceMappingURL=surahList.css.map */

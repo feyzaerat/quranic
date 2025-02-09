@@ -5,6 +5,7 @@ $font-stylish: 'Stylish', serif;
 $font-poppins: 'Poppins', serif;
 $font-parisienne: 'Parisienne', serif;
 $font-waterfall: 'Waterfall', serif;
+$font-arabic: 'Waterfall', serif;
 
 @function get-font($font-name){
   @return map-get($fonts, $font-name);
@@ -16,4 +17,26 @@ $font-waterfall: 'Waterfall', serif;
     --font-poppins: #{$font-poppins};
     --font-parisienne: #{$font-parisienne};
     --font-waterfall: #{$font-waterfall};
+    --font-arabic: #{$font-arabic};
+}
+a{
+  text-decoration: none;
+}
+p{
+  margin-bottom: 0;
+}
+.dark-bg-text{
+  color: var(--dark-bg-text);
+}
+.light-text{
+  color: var(--light-text);
+}
+.dark-text{
+  color: var(--dark-text);
+}
+.colorful-text{
+  color: var(--primary-color);
+  &:hover{
+    color:var(--light-text);
+  }
 }

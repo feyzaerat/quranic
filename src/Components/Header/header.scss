@@ -3,11 +3,11 @@
   flex-direction: row-reverse;
   justify-content: space-between;
   align-items: center;
-  background: var(--light-color);
+  background: var(--bg-color);
   border-bottom: 3px solid var(--primary-color);
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
-  font-family: serif;
+  font-family: var(--font-family);
   p {
     margin-bottom: 0;
   }
@@ -52,25 +52,31 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    color:var(--dark-text);
+    font-family: var(--font-arabic);
     svg {
       transition: transform 0.3s ease;
       margin-top: -0.5rem;
       color: var(--primary-color);
     }
   }
+  .surahTurkishName{
+    color:var(--dark-text);
+  }
   .selectBox {
+    font-family: var(--font-family);
     border: none;
     background: var(--white-color) !important;
     outline: none;
     background: transparent;
     max-width: 200px;
-    font-family: serif;
     margin-bottom: 0;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 600;
     appearance: none !important;
     text-align:center;
     border-radius: 5rem;
+    color: var(--light-bg-text);
     &:focus {
       border-color: var(--primary-color);
       outline: none;

@@ -1,69 +1,113 @@
+$colors: (
+  "soft-green": #9cbcb7,
+  "soft-coffee": #a68c6d,
+  "dark": #3b3e47,
+  "light": #ebebed,
+  "white": #fefefe,
+  "black": #212226,
+  "success": #5cc9ad,
+  "warning": #f9c851,
+  "danger": #a11d19,
+  "info": #6aa6ad,
+  "disabled": #e5e4e5,
+  "soft-golden": #dec8a1,
+  "text": #5f6673,
+  "beige": #faf5f0,
+  "focus": #71774c,
+  "orange": #E8AC6B,
+  "seaweed": #3a7450,
+
+);
+$hover-colors: (
+  "soft-green": lighten(#9cbcb7, 10%),
+  "soft-coffee": lighten(#a68c6d, 10%),
+  "dark": darken(#3b3e47, 10%),
+  "light": lighten(#ebebed, 10%),
+  "white": lighten(#fefefe, 10%),
+  "success": lighten(#5cc9ad, 10%),
+  "warning": darken(#f9c851, 10%),
+  "danger": darken(#a11d19, 10%),
+  "info": lighten(#6aa6ad, 10%),
+  "disabled": lighten(#e5e4e5, 10%),
+  "soft-golden": lighten(#dec8a1, 10%),
+  "beige": lighten(#faf5f0, 10%),
+);
+@function get-color($color-name) {
+  @return map-get($colors, $color-name);
+}
+@function get-hover-color($color-name) {
+  @return map-get($hover-colors, $color-name);
+}
+:root {
+  --primary-color: #{get-color("soft-green")};
+  --secondary-color: #{get-color("soft-coffee")};
+  --dark-color: #{get-color("dark")};
+  --light-color: #{get-color("light")};
+  --white-color: #{get-color("white")};
+  --success-color: #{get-color("success")};
+  --warning-color: #{get-color("warning")};
+  --danger-color: #{get-color("danger")};
+  --info-color: #{get-color("info")};
+  --disabled-color: #{get-color("disabled")};
+  --soft-golden-color: #{get-color("soft-golden")};
+  --beige-color: #{get-color("beige")};
+  --bg-color: #{get-color("light")};
+  --focus-color: #{get-color("focus")};
+  --text-color: #{get-color("text")};
+  --light-text: #{get-color("white")};
+  --dark-text: #{get-color("dark")};
+  --layout-bg-color: #{get-color("white")};
+  --beige-hover-color: #{get-hover-color("beige")};
+  --white-shadow_first: #{get-color("disabled")};
+  --white-shadow_second: #{get-color("light")};
+  --white-shadow_third: #{get-color("primary")};
+  
+}
+
 body {
-  background-color: var(--light-color);
+  background-color: var(--bg-color);
   font-family: var(--font-family);
   width: 100%;
   height: 100%;
   max-height: 1080px;
   overflow: hidden;
-  &.light {
-    background-color: var(--light-color);
-    button,
-    a {
-      color: var(--primary-color);
-    }
-    a {
-      &.pagination-btn {
-        background: var(--light-color);
-      }
-    }
-  }
   &.dark {
-    background-color: var(--dark-color);
-    .router-content,
-    .layout,
-    .page,
-    .header,
-    .navbar-layout {
-      background-color: var(--dark-color);
-    }
-    .navbar-layout {
-      background-color: var(--dark-color) !important;
-      border-bottom: 1px solid var(--light-color);
-    }
-    .sidebar {
-      background-color: var(--dark-color);
-      box-shadow: rgba(258, 258, 258, 0.45) 0px 25px 20px -20px inset;
-    }
-    button,
-    select,
-    a,
-    p {
-      color: var(--white-color);
-    }
-    color: var(--white-color);
-    a {
-      &.pagination-btn {
-        background: var(--light-color);
-        color: var(--primary-color);
-      }
-    }
+    --bg-color: #{get-color("dark")};
+    --primary-color: #{get-color("white")};
+    --layout-bg-color: #{get-color("black")};
+    --beige-color: #{get-color("dark")};
+    --beige-hover-color: #{get-hover-color("dark")};
+    --light-text: #{get-color("info")}!important;
+    --text-color: #{get-color("white")};
+    --dark-text: #{get-color("white")};
+    --dark-bg-text: #{get-color("black")}; 
+    --light-bg-text: #{get-color("text")}; 
+    --shadow_primary: #{get-color("soft-green")};
+    --focus-color: #{get-color("info")};
   }
+
+  &.light {
+    --bg-color: #{get-color("light")};
+    --primary-color: #{get-color("soft-green")};
+    --layout-bg-color: #{get-color("white")};
+    --light-text: #{get-color("light")};
+    --dark-text: #{get-color("dark")};
+    --dark-bg-text: #{get-color("white")};
+    --light-bg-text: #{get-color("text")}; 
+    --beige-hover-color: #{get-hover-color("beige")};
+    --shadow_primary: #{get-color("primary")};
+    --focus-color: #{get-color("success")};
+    
+  }
+
   &.soft {
-    background-color: var(--light-color);
-    button,
-    a {
-      color: var(--secondary-color);
-    }
-    a {
-        &.pagination-btn {
-          background: var(--light-color);
-          color: var(--secondary-color);
-        }
-      }
+    --bg-color: #{get-color("light")};
+    --primary-color: #{get-color("soft-coffee")};
+    --light-text: #{get-color("white")};
+    --dark-bg-text: #{get-color("white")};
+    --light-bg-text: #{get-color("text")}; 
+    --beige-hover-color: #{get-hover-color("beige")};
+    --shadow_primary: #{get-color("primary")};
+    --focus-color: #{get-color("orange")};
   }
-}
-a {
-  text-decoration: none;
-  color: inherit;
-  cursor: pointer;
 }

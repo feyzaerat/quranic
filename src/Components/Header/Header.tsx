@@ -81,7 +81,7 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
             <GiVineFlower />
           </span>
         </p>
-        <p className="surahEnglishName">{surahData.surahNameTurkish}</p>
+        <p className="surahTurkishName">{surahData.surahNameTurkish}</p>
         <div className="noteDiv">
           <small>Mealini okumak istediğiniz ayete tıklayınız...</small>
         </div>

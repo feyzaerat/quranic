@@ -53,13 +53,13 @@ const Surah = ({ searchSurah }: Props) => {
         filteredSurahData.map((surah) => (
           <div key={surah.id} className="surahRow">
             <Link to={`/surah/${surah.id + 1}`}>
-              <span className="surahNumber">
+              <span className="surahNumber ">
                 <b>{surah.id + 1} - </b>
               </span>
               <span className="surahNameEnglish">
                 {surah.surahNameTurkish}{" "}
               </span>
-              <span className="surahNameArabicName">
+              <span className="surahNameArabicName colorful-text">
                 {surah.surahNameArabic}{" "}
               </span>
             </Link>

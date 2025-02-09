@@ -28,7 +28,7 @@ const Pagination = ({ surahId, setSurahId, surahData }: Props) => {
      
       <Link
         type="button"
-        className={`btn pagination-btn ${prevSurahId === null ? "disabled" : ""}`}
+        className={`colorful-text btn pagination-btn ${prevSurahId === null ? "disabled" : ""}`}
         to={prevSurahId !== null ? `/surah/${prevSurahId}` : "#"}
         onClick={(e) => {
           if (prevSurahId === null) e.preventDefault(); 
@@ -45,7 +45,7 @@ const Pagination = ({ surahId, setSurahId, surahData }: Props) => {
     
       <Link
         type="button"
-        className={`btn pagination-btn ${nextSurahId === null ? "disabled" : ""}`}
+        className={`colorful-text btn pagination-btn ${nextSurahId === null ? "disabled" : ""}`}
         to={nextSurahId !== null ? `/surah/${nextSurahId}` : "#"}
         onClick={(e) => {
           if (nextSurahId === null) e.preventDefault(); 

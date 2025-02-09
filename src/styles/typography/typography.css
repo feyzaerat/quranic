@@ -6,4 +6,32 @@
   --font-poppins: Poppins, serif;
   --font-parisienne: Parisienne, serif;
   --font-waterfall: Waterfall, serif;
+  --font-arabic: Waterfall, serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 0;
+}
+
+.dark-bg-text {
+  color: var(--dark-bg-text);
+}
+
+.light-text {
+  color: var(--light-text);
+}
+
+.dark-text {
+  color: var(--dark-text);
+}
+
+.colorful-text {
+  color: var(--primary-color);
+}
+.colorful-text:hover {
+  color: var(--light-text);
 }/*# sourceMappingURL=typography.css.map */

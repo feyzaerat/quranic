@@ -15,8 +15,8 @@ const Sidebar = (props: Props) => {
     <div className="layout sidebar">
       <div className="sidebar-header">
         <div className="sidebar-nav">
-          <Link to="">Sûre</Link>
-          <Link to="">Cûz</Link>
+          <Link className="dark-bg-text" to="">Sûre</Link>
+          <Link className="dark-bg-text" to="">Cûz</Link>
         </div>
         <div className="sidebar-search">
           <Form>

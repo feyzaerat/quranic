@@ -5,7 +5,7 @@
 .layout.footer {
   position: fixed;
   display: flex;
-  background: var(--disabled-color);
+  background: var(--bg-color);
   width: 100%;
   margin: 0.25rem !important;
   left: 0;
@@ -21,6 +21,7 @@
 .layout.footer p {
   font-size: 12px;
   margin-bottom: 0;
+  color: var(--text-color);
 }
 .layout.footer p a {
   color: var(--primary-color);

@@ -10,6 +10,7 @@ const Footer = (props: Props) => {
       <p>
         &copy; {currentYear}{" "}
         <Link
+          className="colorful-text"
           to="https://feyzaerat.com.tr"
           target="_blank"
           rel="noopener noreferrer"
