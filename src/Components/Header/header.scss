@@ -13,6 +13,7 @@
   }
   audio {
     height: 40px;
+    width: 300px;
     &::-webkit-media-controls-play-button {
       background-color: var(--primary-color) !important;
       border-radius: 50%;
@@ -68,7 +69,8 @@
     font-size: 16px;
     font-weight: 600;
     appearance: none !important;
-    text-align: left;
+    text-align:center;
+    border-radius: 5rem;
     &:focus {
       border-color: var(--primary-color);
       outline: none;
