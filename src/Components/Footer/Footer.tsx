@@ -6,7 +6,7 @@ type Props = {};
 const Footer = (props: Props) => {
   const currentYear = new Date().getFullYear();
   return (
-    <div className="layout footer">
+    <div className="layout footer d-flex">
       <p>
         &copy; {currentYear}{" "}
         <Link
@@ -16,7 +16,7 @@ const Footer = (props: Props) => {
         >
           FKE Software.
         </Link>{" "}
-        All rights reserved.
+        <i className="disabled">All rights reserved.</i>
       </p>
     </div>
   );

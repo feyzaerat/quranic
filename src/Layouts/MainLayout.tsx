@@ -5,19 +5,16 @@ import "./layout.css";
 type Props = {};
 
 const MainLayout = (props: Props) => {
-  
   return (
     <>
       <Navbar />
       <div className="main-layout">
         <Sidebar />
         <div className="content">
-        <Router/>
-        <Footer/>
+          <Router />
         </div>
-        
       </div>
-     
+      <Footer />
     </>
   );
 };
