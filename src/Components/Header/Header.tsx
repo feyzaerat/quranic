@@ -3,7 +3,7 @@ import { SurahData } from "../../API/SurahModel";
 import "./header.css";
 import { useNavigate } from "react-router-dom";
 import { GiVineFlower } from "react-icons/gi";
-<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />
+<link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css" />;
 type Props = {
   surahId: number;
   setSurahId: (id: number) => void;
@@ -81,6 +81,9 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
           </span>
         </p>
         <p className="surahEnglishName">{surahData.surahNameTurkish}</p>
+        <div className="noteDiv">
+          <small>Mealini okumak istediğiniz ayete tıklayınız...</small>
+        </div>
       </div>
     </div>
   );
