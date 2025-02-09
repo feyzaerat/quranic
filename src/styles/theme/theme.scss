@@ -14,9 +14,8 @@ $colors: (
   "text": #5f6673,
   "beige": #faf5f0,
   "focus": #71774c,
-  "orange": #E8AC6B,
+  "orange": #e8ac6b,
   "seaweed": #3a7450,
-
 );
 $hover-colors: (
   "soft-green": lighten(#9cbcb7, 10%),
@@ -61,7 +60,6 @@ $hover-colors: (
   --white-shadow_first: #{get-color("disabled")};
   --white-shadow_second: #{get-color("light")};
   --white-shadow_third: #{get-color("primary")};
-  
 }
 
 body {
@@ -77,11 +75,11 @@ body {
     --layout-bg-color: #{get-color("black")};
     --beige-color: #{get-color("dark")};
     --beige-hover-color: #{get-hover-color("dark")};
-    --light-text: #{get-color("info")}!important;
+    --light-text: #{get-color("info")};
     --text-color: #{get-color("white")};
     --dark-text: #{get-color("white")};
-    --dark-bg-text: #{get-color("black")}; 
-    --light-bg-text: #{get-color("text")}; 
+    --dark-bg-text: #{get-color("black")};
+    --light-bg-text: #{get-color("text")};
     --shadow_primary: #{get-color("soft-green")};
     --focus-color: #{get-color("info")};
   }
@@ -93,11 +91,10 @@ body {
     --light-text: #{get-color("light")};
     --dark-text: #{get-color("dark")};
     --dark-bg-text: #{get-color("white")};
-    --light-bg-text: #{get-color("text")}; 
+    --light-bg-text: #{get-color("text")};
     --beige-hover-color: #{get-hover-color("beige")};
     --shadow_primary: #{get-color("primary")};
     --focus-color: #{get-color("success")};
-    
   }
 
   &.soft {
@@ -105,7 +102,7 @@ body {
     --primary-color: #{get-color("soft-coffee")};
     --light-text: #{get-color("white")};
     --dark-bg-text: #{get-color("white")};
-    --light-bg-text: #{get-color("text")}; 
+    --light-bg-text: #{get-color("text")};
     --beige-hover-color: #{get-hover-color("beige")};
     --shadow_primary: #{get-color("primary")};
     --focus-color: #{get-color("orange")};

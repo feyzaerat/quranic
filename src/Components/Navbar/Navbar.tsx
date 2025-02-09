@@ -6,45 +6,60 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import { IoColorPaletteOutline } from "react-icons/io5";
 import { FaRegUser } from "react-icons/fa";
 
-import "./navbar.css"
-import { useState } from "react";
+import "./navbar.css";
+import { useState, useEffect } from "react";
+
 function Navy() {
-  const [theme, setTheme] = useState<string>("light");
+  const [theme, setTheme] = useState<string>(() => {
+    return localStorage.getItem("theme") || "light";
+  });
+
+  useEffect(() => {
+    document.body.classList.remove("light", "dark", "soft");
+    document.body.classList.add(theme);
+  }, [theme]);
 
   const handleThemeChange = (newTheme: string) => {
     setTheme(newTheme);
-    document.body.classList.remove("light", "dark", "soft");
-    document.body.className= newTheme;
-  }
+    localStorage.setItem("theme", newTheme);
+  };
+
   return (
     <Navbar expand="lg" className={`navbar-layout ${theme}`}>
       <Container fluid>
-        <Navbar.Brand href="#" className="colorful-text">Erat Qurânî</Navbar.Brand>
+        <Navbar.Brand href="#" className="colorful-text">
+          Erat Qurânî
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
-          <Nav
-            className="me-auto my-2 my-lg-0"
-            style={{ maxHeight: "100px" }}
-            navbarScroll
-          >
+          <Nav className="me-auto my-2 my-lg-0" navbarScroll>
             <Nav.Link href="/">Anasayfa</Nav.Link>
             <Nav.Link href="/surah">Sûreler</Nav.Link>
-            <Nav.Link href="#action3">Cûzler</Nav.Link>
-            <Nav.Link href="#action3">Namaz Vakitleri</Nav.Link>
-            <Nav.Link href="#action3">Hadisler</Nav.Link>
-            <Nav.Link href="#action3">Hakkımızda</Nav.Link>
-         
+            <Nav.Link href="#">Cûzler</Nav.Link>
+            <Nav.Link href="#">Namaz Vakitleri</Nav.Link>
+            <Nav.Link href="#">Hadisler</Nav.Link>
+            <Nav.Link href="#">Hakkımızda</Nav.Link>
           </Nav>
 
-          <NavDropdown className="right-nav-circle" title={<IoColorPaletteOutline />}>
-          <NavDropdown.Item onClick={() => (handleThemeChange("light"))}>Açık</NavDropdown.Item>
-          <NavDropdown.Item onClick={() => (handleThemeChange("dark"))}>Koyu</NavDropdown.Item>
-          <NavDropdown.Item onClick={() => (handleThemeChange("soft"))}>Soft</NavDropdown.Item>
+          <NavDropdown
+            className="right-nav-circle"
+            title={<IoColorPaletteOutline />}
+          >
+            <NavDropdown.Item onClick={() => handleThemeChange("light")}>
+              Açık
+            </NavDropdown.Item>
+            <NavDropdown.Item onClick={() => handleThemeChange("dark")}>
+              Koyu
+            </NavDropdown.Item>
+            <NavDropdown.Item onClick={() => handleThemeChange("soft")}>
+              Soft
+            </NavDropdown.Item>
           </NavDropdown>
-          <NavDropdown className="right-nav-circle" title={<FaRegUser />}> 
-          <NavDropdown.Item onClick={() => (handleThemeChange("light"))}>Profil</NavDropdown.Item>
-          <NavDropdown.Item onClick={() => (handleThemeChange("dark"))}>Ayarlar</NavDropdown.Item>
-          <NavDropdown.Item onClick={() => (handleThemeChange("soft"))}>Çıkış Yap</NavDropdown.Item>
+
+          <NavDropdown className="right-nav-circle" title={<FaRegUser />}>
+            <NavDropdown.Item>Profil</NavDropdown.Item>
+            <NavDropdown.Item>Ayarlar</NavDropdown.Item>
+            <NavDropdown.Item>Çıkış Yap</NavDropdown.Item>
           </NavDropdown>
         </Navbar.Collapse>
       </Container>

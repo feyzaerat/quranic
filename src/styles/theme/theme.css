@@ -37,7 +37,7 @@ body.dark {
   --layout-bg-color: #212226;
   --beige-color: #3b3e47;
   --beige-hover-color: #24262b;
-  --light-text: #6aa6ad!important;
+  --light-text: #6aa6ad;
   --text-color: #fefefe;
   --dark-text: #fefefe;
   --dark-bg-text: #212226;
@@ -65,5 +65,5 @@ body.soft {
   --light-bg-text: #5f6673;
   --beige-hover-color: white;
   --shadow_primary: ;
-  --focus-color: #E8AC6B;
+  --focus-color: #e8ac6b;
 }/*# sourceMappingURL=theme.css.map */
