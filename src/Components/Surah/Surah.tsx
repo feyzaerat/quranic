@@ -3,6 +3,7 @@ import { SurahData } from "../../API/SurahModel";
 import "./surah.css";
 import { ScrollTop } from "..";
 import TranslateData from "../../API/TranslateModel";
+import { TbZoomInFilled, TbZoomOutFilled  } from "react-icons/tb";
 
 type Props = {
   surahData: SurahData;
@@ -55,10 +56,18 @@ const Surah = ({ surahData, translateData }: Props) => {
       >
         {surahData && surahData.arabic1.length > 0 && (
           <div
-            className="arabic1"
+            className="surah-page"
             style={{ flexDirection: "column-reverse", direction: "rtl" }}
           >
-            <h2 className="bismillah">بسم الله الرحمن الرحيم</h2>
+            <div className="sub-header">
+              <div className="btn-row">
+                <button type="button"><TbZoomOutFilled />
+                </button>
+                <button type="button"><TbZoomInFilled />
+                </button>
+              </div>
+              <h2 className="bismillah">بسم الله الرحمن الرحيم</h2>
+            </div>
             {surahData.arabic1.map((text, index) => (
               <div
                 key={index}
@@ -70,11 +79,13 @@ const Surah = ({ surahData, translateData }: Props) => {
                 {text}
                 <span>{convertToArabicNumbers(index + 1)}</span>
 
-                {hoveredAyahIndex === index && translateData.chapter && translateData.chapter[index].text && (
-                  <div className="ayahTranslatePopup">
-                    {translateData.chapter[index].text}
-                  </div>
-                )}
+                {hoveredAyahIndex === index &&
+                  translateData.chapter &&
+                  translateData.chapter[index].text && (
+                    <div className="ayahTranslatePopup">
+                      {translateData.chapter[index].text}
+                    </div>
+                  )}
               </div>
             ))}
           </div>
