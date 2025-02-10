@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-
 import { Hadith, Header, Pagination, Pray, QuranCards } from "../../Components";
 import { SurahData } from "../../API/SurahModel";
 import SurahService from "../../API/SurahService";

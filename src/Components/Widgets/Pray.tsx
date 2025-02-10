@@ -3,10 +3,11 @@ import "./widget.css";
 import PrayService from "../../API/PrayService";
 import { PrayResponse, PrayResult } from "../../API/PrayModel";
 import { CitySelect } from "../../Components";
+import Gregorian from "../Dates/Gregorian";
+import Hijri from "../Dates/Hijri";
+import { PiFlowerFill } from "react-icons/pi";
 
-type Props = {};
-
-const Pray = (props: Props) => {
+const Pray = () => {
   const [city, setCity] = useState<string>("kocaeli");
   const [prayData, setPrayData] = useState<PrayResult[]>([]);
 
@@ -27,9 +28,14 @@ const Pray = (props: Props) => {
     <div className="pray layout">
       <div className="header w-100 text-center">
         <p>
-          Namaz Vakitleri -{" "}
+          Namaz Vakitleri <PiFlowerFill  />{" "}
           {city.charAt(0).toUpperCase() + city.slice(1).toLowerCase()}
         </p>
+        <span></span>
+        <div className="date-container">
+          <Gregorian /> <PiFlowerFill  />
+          <Hijri />
+        </div>
       </div>
       <div className="widget-content">
         <div className="location__container">
