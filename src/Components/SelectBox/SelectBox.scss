@@ -1,0 +1,27 @@
+.ant-select,.ant-select-single {
+    font-size: 14px!important;
+    height: 56px!important;
+    width: -webkit-fill-available!important;
+    border:2px solid var(--light-color);
+    border-radius: 0.5rem;
+    &:hover{
+        border:2px solid var(--light-color);
+        outline:none!important;
+    }
+    &:active{
+        border:2px solid var(--light-color);
+        outline:none!important;
+    }
+    &::selection{
+        border:2px solid var(--light-color);
+        outline:none!important;
+    }
+    &:focus{
+        border:2px solid var(--light-color);
+        outline:none!important;
+    }
+    &::after{
+        border:2px solid var(--light-color);
+        outline:none!important;
+    }
+}

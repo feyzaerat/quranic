@@ -6,7 +6,7 @@ type Props = {};
 
 const Router = () => {
   return (
-    <div className="router-content">
+    <div className="router-content w-100">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Home />} />

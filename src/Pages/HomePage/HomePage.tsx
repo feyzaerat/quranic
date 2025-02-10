@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-import { Header, Pagination } from "../../Components";
+import { Hadith, Header, Pagination, Pray, QuranCards } from "../../Components";
 import { SurahData } from "../../API/SurahModel";
 import SurahService from "../../API/SurahService";
 
 import TranslateService from "../../API/TranslateService";
 import TranslateData from "../../API/TranslateModel";
+import "./homePage.css"
 
 const HomePage = () => {
   const [surahData, setSurahData] = useState<SurahData | null>(null);
@@ -27,8 +28,16 @@ const HomePage = () => {
 
   return (
     <>
-      <div className="layout">
-       
+      <div className="layout homePage">
+       <div className="widget">
+        <Pray/>
+       </div>
+       <div className="widget">
+        <Hadith/>
+       </div>
+       <div className="widget">
+        <QuranCards/>
+       </div>
       </div>
     </>
   );

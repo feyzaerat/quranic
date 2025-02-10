@@ -1,0 +1,31 @@
+.ant-select, .ant-select-single {
+  font-size: 14px !important;
+  height: 56px !important;
+  width: -webkit-fill-available !important;
+  border: 2px solid var(--light-color);
+  border-radius: 0.5rem;
+}
+.ant-select:hover, .ant-select-single:hover {
+  border: 2px solid var(--light-color);
+  outline: none !important;
+}
+.ant-select:active, .ant-select-single:active {
+  border: 2px solid var(--light-color);
+  outline: none !important;
+}
+.ant-select::-moz-selection, .ant-select-single::-moz-selection {
+  border: 2px solid var(--light-color);
+  outline: none !important;
+}
+.ant-select::selection, .ant-select-single::selection {
+  border: 2px solid var(--light-color);
+  outline: none !important;
+}
+.ant-select:focus, .ant-select-single:focus {
+  border: 2px solid var(--light-color);
+  outline: none !important;
+}
+.ant-select::after, .ant-select-single::after {
+  border: 2px solid var(--light-color);
+  outline: none !important;
+}/*# sourceMappingURL=SelectBox.css.map */

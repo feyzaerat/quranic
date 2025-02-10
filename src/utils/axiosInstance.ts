@@ -2,17 +2,24 @@ import axios from "axios";
 
 const quranApi = axios.create({
   baseURL: "https://quranapi.pages.dev/api/",
-})
+});
 const translateApi = axios.create({
   baseURL: "https://cdn.jsdelivr.net/gh/fawazahmed0/quran-api@1/editions/",
 });
-
-quranApi.interceptors.request.use((config) => {
-  config.headers["Accept-Language"] = "tr";
-  return config;
+const prayApi = axios.create({
+  baseURL: "https://api.collectapi.com/pray/",
 });
-translateApi.interceptors.request.use((config) => {
-  config.headers["Accept-Language"] = "tr";
+
+[quranApi, translateApi, prayApi].forEach((api) => {
+  api.interceptors.request.use((config) => {
+    config.headers["Accept-Language"] = "tr";
+    return config;
+  });
+});
+
+prayApi.interceptors.request.use((config) => {
+  config.headers["Authorization"] =
+    "apikey 73eSVsP6UzBRM5OB2S7PS7:4NRYIgHdOLsEDUIAzta1jx";
   return config;
 });
 
@@ -27,4 +34,4 @@ axios.interceptors.response.use(
     );
   }
 );
-export  {quranApi, translateApi};
+export { quranApi, translateApi, prayApi };
