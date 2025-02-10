@@ -56,11 +56,11 @@ function Navy() {
             </NavDropdown.Item>
           </NavDropdown>
 
-          <NavDropdown className="right-nav-circle" title={<FaRegUser />}>
+          {/*<NavDropdown className="right-nav-circle" title={<FaRegUser />}>
             <NavDropdown.Item>Profil</NavDropdown.Item>
             <NavDropdown.Item>Ayarlar</NavDropdown.Item>
             <NavDropdown.Item>Çıkış Yap</NavDropdown.Item>
-          </NavDropdown>
+          </NavDropdown>*/}
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -52,4 +52,25 @@
 }
 .navbar-layout .right-nav-circle:last-child {
   font-size: 18px !important;
+}
+
+.dropdown-menu.show {
+  transform: translateX(-100px) translateY(20px);
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  background: var(--layout-bg-color);
+}
+.dropdown-menu.show a {
+  color: var(--text-color);
+}
+.dropdown-menu.show a:hover {
+  color: var(--light-bg-text);
+}
+.dropdown-menu.show a:focus {
+  background: var(--light-bg-text);
+  color: var(--dark-text);
+}
+.dropdown-menu.show a:active {
+  background: var(--light-bg-text);
+  color: var(--dark-text);
 }/*# sourceMappingURL=navbar.css.map */

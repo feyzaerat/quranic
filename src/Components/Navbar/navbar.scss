@@ -7,20 +7,20 @@
     margin-top: -0.75rem;
     margin-left: 1.5rem;
     font-size: 48px;
-    &:hover{
-      color:var(--dark-text);
+    &:hover {
+      color: var(--dark-text);
       transition: 0.5s ease-in;
       scale: (1.005);
     }
   }
-  .navbar-collapse{
+  .navbar-collapse {
     padding-left: 12rem;
-    .navbar-nav{
-      a{
+    .navbar-nav {
+      a {
         font-size: 20px;
-        color:var(--text-color);
-        &:hover{
-          color:var(--primary-color);
+        color: var(--text-color);
+        &:hover {
+          color: var(--primary-color);
           transition: 0.5s ease-in;
           scale: (1.005);
         }
@@ -56,6 +56,28 @@
     }
     &:last-child {
       font-size: 18px !important;
+    }
+  }
+}
+.dropdown-menu {
+  &.show {
+    transform: translateX(-100px) translateY(20px);
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+    background: var(--layout-bg-color);
+    a {
+      color: var(--text-color);
+      &:hover {
+        color: var(--light-bg-text);
+      }
+      &:focus {
+        background: var(--light-bg-text);
+        color: var(--dark-text);
+      }
+      &:active {
+        background: var(--light-bg-text);
+        color: var(--dark-text);
+      }
     }
   }
 }
