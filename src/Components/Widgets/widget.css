@@ -1,12 +1,18 @@
 .widget {
   width: 100%;
-  background: var(--bg-color);
-  padding: 1rem;
+  background: var(--primary-color);
+  padding: 0.5rem;
   border-radius: 0.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+.widget .pray,
+.widget .hadith,
+.widget .quran-cards {
+  margin: 0.5rem !important;
+  border-radius: 0.5rem;
 }
 .widget .pray {
   display: flex;
@@ -29,6 +35,9 @@
   line-height: 40px;
   letter-spacing: 0.1em;
   font-family: var(--font-waterfall);
+  background: transparent;
+  background: var(--cream-color);
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
 }
 .widget .pray .widget-content {
   padding: 1rem;

@@ -4,7 +4,7 @@ type Props = {}
 
 const QuranCards = (props: Props) => {
   return (
-    <div>QuranCards</div>
+    <div className='quran-cards'>QuranCards</div>
   )
 }
 

@@ -13,6 +13,7 @@ $colors: (
   "soft-golden": #dec8a1,
   "text": #5f6673,
   "beige": #faf5f0,
+  "cream": #f8f5f5,
   "focus": #71774c,
   "orange": #e8ac6b,
   "seaweed": #3a7450,
@@ -50,6 +51,7 @@ $hover-colors: (
   --disabled-color: #{get-color("disabled")};
   --soft-golden-color: #{get-color("soft-golden")};
   --beige-color: #{get-color("beige")};
+  --cream-color: #{get-color("cream")};
   --bg-color: #{get-color("light")};
   --focus-color: #{get-color("focus")};
   --text-color: #{get-color("text")};

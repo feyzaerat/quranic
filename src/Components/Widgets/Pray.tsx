@@ -26,7 +26,10 @@ const Pray = (props: Props) => {
   return (
     <div className="pray layout">
       <div className="header w-100 text-center">
-        <p>Namaz Vakitleri</p>
+        <p>
+          Namaz Vakitleri -{" "}
+          {city.charAt(0).toUpperCase() + city.slice(1).toLowerCase()}
+        </p>
       </div>
       <div className="widget-content">
         <div className="location__container">
