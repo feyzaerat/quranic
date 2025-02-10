@@ -7,6 +7,11 @@
     margin-top: -0.75rem;
     margin-left: 1.5rem;
     font-size: 48px;
+    &:hover{
+      color:var(--dark-text);
+      transition: 0.5s ease-in;
+      scale: (1.005);
+    }
   }
   .navbar-collapse{
     padding-left: 12rem;
@@ -14,6 +19,11 @@
       a{
         font-size: 20px;
         color:var(--text-color);
+        &:hover{
+          color:var(--primary-color);
+          transition: 0.5s ease-in;
+          scale: (1.005);
+        }
       }
     }
   }

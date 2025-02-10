@@ -9,12 +9,22 @@
   margin-left: 1.5rem;
   font-size: 48px;
 }
+.navbar-layout .navbar-brand:hover {
+  color: var(--dark-text);
+  transition: 0.5s ease-in;
+  scale: 1.005;
+}
 .navbar-layout .navbar-collapse {
   padding-left: 12rem;
 }
 .navbar-layout .navbar-collapse .navbar-nav a {
   font-size: 20px;
   color: var(--text-color);
+}
+.navbar-layout .navbar-collapse .navbar-nav a:hover {
+  color: var(--primary-color);
+  transition: 0.5s ease-in;
+  scale: 1.005;
 }
 .navbar-layout .right-nav-circle {
   padding-right: 1.5rem;
