@@ -23,6 +23,7 @@ const Hadith = (props: Props) => {
       console.log("Random Hadith", randomHadith);
     } catch (error) {
       console.log("Hadis API hatası", error);
+
     }
   };
 

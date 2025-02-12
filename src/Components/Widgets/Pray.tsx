@@ -8,7 +8,9 @@ import Hijri from "../Dates/Hijri";
 import { PiFlowerFill } from "react-icons/pi";
 
 const Pray = () => {
-  const [city, setCity] = useState<string>("kocaeli");
+  const [city, setCity] = useState<string>(() => {
+    return localStorage.getItem("selectedCity") || "kocaeli";
+  });
   const [prayData, setPrayData] = useState<PrayResult[]>([]);
 
   useEffect(() => {
@@ -24,22 +26,27 @@ const Pray = () => {
     getPrays();
   }, [city]);
 
+  const handleSaveCity = (selectedCity: string) => {
+    setCity(selectedCity);
+    localStorage.setItem("selectedCity", selectedCity);
+  };
+
   return (
     <div className="pray layout">
       <div className="header w-100 text-center">
         <p>
-          Namaz Vakitleri <PiFlowerFill  />{" "}
+          Namaz Vakitleri <PiFlowerFill />{" "}
           {city.charAt(0).toUpperCase() + city.slice(1).toLowerCase()}
         </p>
         <span></span>
         <div className="date-container">
-          <Gregorian /> <PiFlowerFill  />
+          <Gregorian /> <PiFlowerFill />
           <Hijri />
         </div>
       </div>
       <div className="widget-content">
         <div className="location__container">
-          <CitySelect onCityChange={setCity} />
+          <CitySelect onCityChange={handleSaveCity} />
         </div>
         <div className="pray__container">
           {prayData.length > 0 ? (
