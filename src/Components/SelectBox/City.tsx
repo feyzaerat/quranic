@@ -15,7 +15,7 @@ const City: React.FC<CityProps> = ({ onCityChange }) => (
     optionFilterProp="label"
     onChange={onCityChange}
     options={CityAPI.map((city) => ({
-      value: city.title.toLowerCase(),
+      value: city.endpoint.toLowerCase(),
       label: city.title.charAt(0).toUpperCase() + city.title.slice(1),
     }))}
   />
