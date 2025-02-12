@@ -14,17 +14,20 @@
   margin: 0.5rem !important;
   border-radius: 0.5rem;
 }
-.widget .pray {
+.widget .pray,
+.widget .hadith {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
 }
-.widget .pray p {
+.widget .pray p,
+.widget .hadith p {
   color: var(--text-color);
 }
-.widget .pray .header {
+.widget .pray .header,
+.widget .hadith .header {
   display: grid;
   flex-direction: row;
   grid-template-columns: 33% 33% 33%;
@@ -39,12 +42,15 @@
   background: transparent;
   background: var(--cream-color);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+  color: var(--text-color);
 }
-.widget .pray .header svg {
+.widget .pray .header svg,
+.widget .hadith .header svg {
   width: 20px;
   color: var(--primary-color);
 }
-.widget .pray .header .date-container {
+.widget .pray .header .date-container,
+.widget .hadith .header .date-container {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
@@ -52,14 +58,17 @@
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
-.widget .pray .header .date-container svg {
+.widget .pray .header .date-container svg,
+.widget .hadith .header .date-container svg {
   width: 20px;
 }
-.widget .pray .header .date-container div {
+.widget .pray .header .date-container div,
+.widget .hadith .header .date-container div {
   font-size: 28px;
   color: var(--text-color);
 }
-.widget .pray .widget-content {
+.widget .pray .widget-content,
+.widget .hadith .widget-content {
   padding: 1rem;
   width: 100%;
   display: flex;
@@ -69,14 +78,28 @@
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
-.widget .pray .location__container {
+.widget .pray .widget-content__hadith,
+.widget .hadith .widget-content__hadith {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  row-gap: 0.5rem;
+  overflow-y: scroll;
+  max-height: 20vh;
+  margin-top: 1rem;
+}
+.widget .pray .location__container,
+.widget .hadith .location__container {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   width: 100%;
 }
-.widget .pray__container {
+.widget .pray__container,
+.widget .hadith__container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -85,7 +108,8 @@
   -moz-column-gap: 1rem;
        column-gap: 1rem;
 }
-.widget .pray__container .time__container {
+.widget .pray__container .time__container,
+.widget .hadith__container .time__container {
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -96,9 +120,38 @@
   padding: 1rem 2rem;
   border-radius: 0.5rem;
 }
-.widget .pray__container .time__container p {
+.widget .pray__container .time__container p,
+.widget .hadith__container .time__container p {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.widget .hadith .header {
+  justify-content: space-between;
+  grid-template-columns: repeat(2, 1fr);
+}
+.widget .hadith .header > p:nth-child(2) {
+  right: 0;
+  text-align: right;
+  justify-content: end;
+  align-items: center;
+  display: flex;
+}
+.widget .hadith .header > p:nth-child(2) .btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  padding: 0;
+  margin: 0;
+}
+.widget .hadith .header > p:nth-child(2) .btn:active, .widget .hadith .header > p:nth-child(2) .btn:focus {
+  outline: none !important;
+  border: none !important;
+}
+.widget .hadith .header > p:nth-child(2) .btn:hover {
+  transform: scale(1.5);
+  transition: 0.5s ease;
 }/*# sourceMappingURL=widget.css.map */
