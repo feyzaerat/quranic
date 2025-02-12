@@ -22,6 +22,7 @@
   --white-shadow_first: #e5e4e5;
   --white-shadow_second: #ebebed;
   --white-shadow_third: ;
+  --widget-header-color: #5f6673;
 }
 
 body {
@@ -45,6 +46,9 @@ body.dark {
   --light-bg-text: #5f6673;
   --shadow_primary: #9cbcb7;
   --focus-color: #6aa6ad;
+}
+body.dark svg {
+  color: var(--dark-text-color) !important;
 }
 body.light {
   --bg-color: #ebebed;

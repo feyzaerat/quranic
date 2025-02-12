@@ -33,7 +33,7 @@ const Hadith = (props: Props) => {
   return (
     <div className="hadith layout">
       <div className="header w-100">
-        <p className="mx-5">Bir Hadis... ( Buharî )</p>
+        <p className="mx-5 widget-header-color">Bir Hadis... ( Buharî )</p>
         <p className="mx-5">
           <button className="btn" title="YENİLE" onClick={getHadith}>
             <HiRefresh />

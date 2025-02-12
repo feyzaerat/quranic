@@ -42,7 +42,10 @@
   background: transparent;
   background: var(--cream-color);
   box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
-  color: var(--text-color);
+}
+.widget .pray .header p,
+.widget .hadith .header p {
+  color: var(--dark-text-color);
 }
 .widget .pray .header svg,
 .widget .hadith .header svg {
@@ -65,7 +68,7 @@
 .widget .pray .header .date-container div,
 .widget .hadith .header .date-container div {
   font-size: 28px;
-  color: var(--text-color);
+  color: var(--dark-text-color);
 }
 .widget .pray .widget-content,
 .widget .hadith .widget-content {

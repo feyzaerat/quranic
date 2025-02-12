@@ -62,6 +62,7 @@ $hover-colors: (
   --white-shadow_first: #{get-color("disabled")};
   --white-shadow_second: #{get-color("light")};
   --white-shadow_third: #{get-color("primary")};
+  --widget-header-color: #{get-color("text")};
 }
 
 body {
@@ -84,6 +85,9 @@ body {
     --light-bg-text: #{get-color("text")};
     --shadow_primary: #{get-color("soft-green")};
     --focus-color: #{get-color("info")};
+    svg {
+      color: var(--dark-text-color)!important;
+    }
   }
 
   &.light {
@@ -97,6 +101,7 @@ body {
     --beige-hover-color: #{get-hover-color("beige")};
     --shadow_primary: #{get-color("primary")};
     --focus-color: #{get-color("success")};
+    
   }
 
   &.soft {
@@ -108,5 +113,6 @@ body {
     --beige-hover-color: #{get-hover-color("beige")};
     --shadow_primary: #{get-color("primary")};
     --focus-color: #{get-color("orange")};
+    
   }
 }
