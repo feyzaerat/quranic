@@ -86,7 +86,7 @@ body {
     --shadow_primary: #{get-color("soft-green")};
     --focus-color: #{get-color("info")};
     svg {
-      color: var(--dark-text-color)!important;
+      color: var(--dark-bg-text)!important;
     }
   }
 

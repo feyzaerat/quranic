@@ -48,7 +48,7 @@ body.dark {
   --focus-color: #6aa6ad;
 }
 body.dark svg {
-  color: var(--dark-text-color) !important;
+  color: var(--dark-bg-text) !important;
 }
 body.light {
   --bg-color: #ebebed;

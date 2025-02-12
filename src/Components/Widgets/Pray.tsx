@@ -33,7 +33,7 @@ const Pray = () => {
 
   return (
     <div className="pray layout">
-      <div className="header w-100 text-center">
+      <div className="header w-100">
         <p>
           Namaz Vakitleri <PiFlowerFill />{" "}
           {city.charAt(0).toUpperCase() + city.slice(1).toLowerCase()}
