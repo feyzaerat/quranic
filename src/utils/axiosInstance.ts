@@ -9,8 +9,11 @@ const translateApi = axios.create({
 const prayApi = axios.create({
   baseURL: "https://api.collectapi.com/pray/",
 });
+const hadithApi = axios.create({
+  baseURL: "https://cdn.jsdelivr.net/gh/fawazahmed0/hadith-api@1/editions/",
+});
 
-[quranApi, translateApi, prayApi].forEach((api) => {
+[quranApi, translateApi, prayApi,hadithApi].forEach((api) => {
   api.interceptors.request.use((config) => {
     config.headers["Accept-Language"] = "tr";
     return config;
@@ -34,4 +37,4 @@ axios.interceptors.response.use(
     );
   }
 );
-export { quranApi, translateApi, prayApi };
+export { quranApi, translateApi, prayApi, hadithApi };
