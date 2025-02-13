@@ -3,7 +3,7 @@ import { SurahData } from "../../API/SurahModel";
 import "./surah.css";
 import { ScrollTop } from "..";
 import TranslateData from "../../API/TranslateModel";
-import { TbZoomInFilled, TbZoomOutFilled  } from "react-icons/tb";
+import { TbZoomInFilled, TbZoomOutFilled } from "react-icons/tb";
 
 type Props = {
   surahData: SurahData;
@@ -13,6 +13,7 @@ type Props = {
 const Surah = ({ surahData, translateData }: Props) => {
   const [hoveredAyahIndex, setHoveredAyahIndex] = useState<number | null>(null);
   const [isScrollTopVisible, setIsScrollTopVisible] = useState(false);
+  const [fontScale, setFontScale] = useState(1);
 
   const convertToArabicNumbers = (num: number): string => {
     const arabicNumbers = ["٠", "١", "٢", "٣", "٤", "٥", "٦", "٧", "٨", "٩"];
@@ -45,6 +46,28 @@ const Surah = ({ surahData, translateData }: Props) => {
     };
   }, []);
 
+  const increaseFontSize = () => {
+    if (fontScale < 2) {
+      const newScale = fontScale + 0.1;
+      setFontScale(newScale);
+      document.documentElement.style.setProperty(
+        "--font-scale",
+        newScale.toString()
+      );
+    }
+  };
+
+  const decreaseFontSize = () => {
+    if (fontScale > 0.75) {
+      const newScale = fontScale - 0.1;
+      setFontScale(newScale);
+      document.documentElement.style.setProperty(
+        "--font-scale",
+        newScale.toString()
+      );
+    }
+  };
+
   return (
     <>
       <div
@@ -61,9 +84,11 @@ const Surah = ({ surahData, translateData }: Props) => {
           >
             <div className="sub-header">
               <div className="btn-row">
-                <button type="button"><TbZoomOutFilled />
+                <button type="button" onClick={increaseFontSize}>
+                  <TbZoomInFilled />
                 </button>
-                <button type="button"><TbZoomInFilled />
+                <button type="button" onClick={decreaseFontSize}>
+                  <TbZoomOutFilled />
                 </button>
               </div>
               <h2 className="bismillah">بسم الله الرحمن الرحيم</h2>

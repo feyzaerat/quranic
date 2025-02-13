@@ -1,9 +1,13 @@
+:root{
+  --font-scale:1;
+}
 .surah {
   display: flex;
   justify-content: flex-end;
   flex-wrap: wrap;
   row-gap: 1.25rem;
-  font-size: 2.75rem;
+  font-size: calc(2.75rem * var(--font-scale));
+  
   text-align: right;
   font-family: var(--font-arabic-lateef);
   padding: 1rem 0.5rem;
@@ -46,7 +50,7 @@
       }
     }
     .bismillah {
-      font-size: 3.5rem;
+      font-size: calc(3.5rem * var(--font-scale));
       color: var(--primary-color);
       font-family: var(--font-arabic-lateef);
       margin-right: 0.25rem;
