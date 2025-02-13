@@ -5,7 +5,7 @@
   row-gap: 1.25rem;
   font-size: 2.75rem;
   text-align: right;
-  font-family: serif;
+  font-family: var(--font-arabic-lateef);
   padding: 1rem 0.5rem;
   width: 100%;
   height: 100%;
@@ -48,7 +48,7 @@
     .bismillah {
       font-size: 3.5rem;
       color: var(--primary-color);
-      font-family: cursive;
+      font-family: var(--font-arabic-lateef);
       margin-right: 0.25rem;
       cursor: pointer;
       &:hover {

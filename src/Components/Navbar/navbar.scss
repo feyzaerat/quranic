@@ -16,9 +16,11 @@
   .navbar-collapse {
     padding-left: 12rem;
     .navbar-nav {
+     
       a {
         font-size: 20px;
         color: var(--text-color);
+        margin:0 0.5rem;
         &:hover {
           color: var(--primary-color);
           transition: 0.5s ease-in;

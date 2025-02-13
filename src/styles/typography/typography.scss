@@ -1,23 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=MonteCarlo&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+Arabic:wght@100..900&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Stylish&family=Twinkle+Star&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Waterfall&display=swap');
-$font-noto: 'Noto Sans Arabic', sans-serif;
-$font-stylish: 'Stylish', serif;
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&family=Amiri:ital,wght@0,400;0,700;1,400;1,700&family=Caveat:wght@400..700&family=Delius&family=Katibeh&family=Lateef:wght@200;300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400..700&family=Parisienne&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Scheherazade+New:wght@400;500;600;700&family=Stylish&family=Waterfall&display=swap');
+
+$font-family: 'Poppins', serif;
 $font-poppins: 'Poppins', serif;
+$font-stylish: 'Stylish', serif;
+$font-caveat: 'Caveat', serif;
+$font-delius: 'Delius', serif;
 $font-parisienne: 'Parisienne', serif;
 $font-waterfall: 'Waterfall', serif;
-$font-arabic: 'Waterfall', serif;
+$font-arabic-amiri: 'Amiri', serif;
+$font-arabic-quran: 'Amiri Quran', serif;
+$font-arabic-noto: 'Noto Naskh Arabic', sans-serif;
+$font-arabic-scheherazade: 'Scheherazade New', serif;
+$font-arabic-lateef: 'Lateef', serif;
+$font-arabic-katibeh: 'Katibeh', serif;
 
 @function get-font($font-name){
   @return map-get($fonts, $font-name);
 }
 
 :root {
-    --font-family: #{$font-noto};
-    --font-stylish: #{$font-stylish};
-    --font-poppins: #{$font-poppins};
-    --font-parisienne: #{$font-parisienne};
-    --font-waterfall: #{$font-waterfall};
-    --font-arabic: #{$font-arabic};
+  --font-family: #{$font-family}; 
+  --font-stylish: #{$font-stylish};
+  --font-poppins: #{$font-poppins};
+  --font-caveat: #{$font-caveat};
+  --font-delius: #{$font-delius};
+  --font-parisienne: #{$font-parisienne};
+  --font-waterfall: #{$font-waterfall};
+  --font-arabic-amiri: #{$font-arabic-amiri};
+  --font-arabic-quran: #{$font-arabic-quran};
+  --font-arabic-noto: #{$font-arabic-noto};
+  --font-arabic-scheherazade: #{$font-arabic-scheherazade};
+  --font-arabic-lateef: #{$font-arabic-lateef};
+  --font-arabic-katibeh: #{$font-arabic-katibeh};
 }
 a{
   text-decoration: none;

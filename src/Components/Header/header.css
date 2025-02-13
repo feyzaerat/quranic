@@ -8,6 +8,7 @@
   padding: 0.25rem 1rem;
   border-radius: 0.25rem;
   font-family: var(--font-family);
+  font-weight: 600;
 }
 .header p {
   margin-bottom: 0;
@@ -39,12 +40,12 @@
   text-align: right;
 }
 .header .noteDiv small {
-  font-style: italic;
+  letter-spacing: 0.05em;
   color: var(--primary-color);
+  font-size: 16px;
 }
 .header .surahArabicLongName {
-  font-size: 20px;
-  font-weight: 500;
+  font-size: 24px;
   letter-spacing: 0.05rem;
   display: flex;
   flex-direction: row;
@@ -52,7 +53,7 @@
   align-items: center;
   gap: 1rem;
   color: var(--dark-text);
-  font-family: var(--font-arabic);
+  font-family: var(--font-arabic-lateef);
 }
 .header .surahArabicLongName svg {
   transition: transform 0.3s ease;

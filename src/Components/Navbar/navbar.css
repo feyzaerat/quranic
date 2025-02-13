@@ -20,6 +20,7 @@
 .navbar-layout .navbar-collapse .navbar-nav a {
   font-size: 20px;
   color: var(--text-color);
+  margin: 0 0.5rem;
 }
 .navbar-layout .navbar-collapse .navbar-nav a:hover {
   color: var(--primary-color);

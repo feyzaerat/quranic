@@ -10,22 +10,24 @@ const Sidebar = (props: Props) => {
 
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchSurah(event.target.value);
-  }
+  };
   return (
     <div className="layout sidebar">
       <div className="sidebar-header">
         <div className="sidebar-nav">
-          <Link className="dark-bg-text" to="">Sûre</Link>
-          <Link className="dark-bg-text" to="">Cûz</Link>
+          {/*<Link className="dark-bg-text" to="">Cûz</Link>*/}
+          <Link className="dark-bg-text cursor-none" to="">
+            Sûre
+          </Link>
         </div>
         <div className="sidebar-search">
           <Form>
             <Form.Group className="" controlId="formBasicSearch">
-              <Form.Control 
-              type="text" 
-              placeholder="Search .." 
-              value={searchSurah}
-              onChange={handleSearchChange}
+              <Form.Control
+                type="text"
+                placeholder="Search .."
+                value={searchSurah}
+                onChange={handleSearchChange}
               />
             </Form.Group>
           </Form>

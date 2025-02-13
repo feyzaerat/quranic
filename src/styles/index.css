@@ -6,9 +6,15 @@ body {
   margin: 0;
   padding: 0;
   display: block;
-  
   top: 0;
   left: 0;
+  font-family: var(--font-family);
+}
+.cursor-none{
+  cursor: none;
+}
+.cursor-none:hover{
+  cursor: default;
 }
 
 ::-webkit-scrollbar {

@@ -34,11 +34,7 @@ function Navy() {
         <Navbar.Collapse id="navbarScroll">
           <Nav className="me-auto my-2 my-lg-0" navbarScroll>
             <Nav.Link href="/">Anasayfa</Nav.Link>
-            <Nav.Link href="/surah">Sûreler</Nav.Link>
-            <Nav.Link href="#">Cûzler</Nav.Link>
-            <Nav.Link href="#">Namaz Vakitleri</Nav.Link>
-            <Nav.Link href="#">Hadisler</Nav.Link>
-            <Nav.Link href="#">Hakkımızda</Nav.Link>
+            <Nav.Link href="/surah">Sûreler</Nav.Link>            
           </Nav>
 
           <NavDropdown
