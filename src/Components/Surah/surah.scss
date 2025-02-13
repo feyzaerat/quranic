@@ -92,7 +92,7 @@
         border-radius: 50%;
         width: 32px;
         height: 32px;
-        font-size: 0.5rem;
+        font-size: calc(0.5rem * var(--font-scale));
         font-weight: 600;
         font-family: serif;
         text-align: center;
