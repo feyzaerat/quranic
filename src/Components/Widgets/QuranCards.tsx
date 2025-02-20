@@ -64,7 +64,7 @@ const QuranCards = (props: Props) => {
         </div>
         <div className="content">
           {displayedSurahs.map((s) => (
-            <div className="card">
+            <div className="card" key={s.id}>
               <div className="card__title">
                 <p>{s.title} Sûresi</p>
               </div>
