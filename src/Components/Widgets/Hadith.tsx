@@ -18,12 +18,11 @@ const Hadith = (props: Props) => {
 
       const randomHadith =
         hadithsArray[Math.floor(Math.random() * hadithsArray.length)];
-      setHadithData([randomHadith]); 
+      setHadithData([randomHadith]);
 
-      console.log("Random Hadith", randomHadith);
+      //console.log("Random Hadith", randomHadith);
     } catch (error) {
       console.log("Hadis API hatası", error);
-
     }
   };
 
@@ -46,7 +45,11 @@ const Hadith = (props: Props) => {
           <div className="widget-content__hadith" key={hData.hadithnumber}>
             <p></p>
             <p>{hData.text}</p>
-            <p><b>Sahih-i Buhârî </b>{hData.hadithnumber}, <b> Sayfa :</b> {hData.reference.book} <b>Hadis No : </b> {hData.reference.hadith}</p>
+            <p>
+              <b>Sahih-i Buhârî </b>
+              {hData.hadithnumber}, <b> Sayfa :</b> {hData.reference.book}{" "}
+              <b>Hadis No : </b> {hData.reference.hadith}
+            </p>
           </div>
         ))
       ) : (
