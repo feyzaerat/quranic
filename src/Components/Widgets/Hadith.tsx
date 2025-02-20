@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
-import "./widget.css";
+
 import HadithData from "../../API/HadithAPI";
 import HadithService from "../../API/HadithService";
 import { HiRefresh } from "react-icons/hi";
+import "./widget.css";
 
 type Props = {};
 

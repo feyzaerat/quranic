@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import "./sidebar.css";
 import Surah from "./SidebarSurah/SidebarSurah";
 import { Form } from "react-bootstrap";
+import "./sidebar.css";
 type Props = {};
 
 const Sidebar = (props: Props) => {

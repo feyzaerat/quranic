@@ -1,6 +1,7 @@
 import React from "react";
-import "./footer.css";
 import { Link } from "react-router-dom";
+import "./footer.css";
+
 type Props = {};
 
 const Footer = (props: Props) => {

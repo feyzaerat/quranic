@@ -1,9 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
+
 import { SurahData } from "../../API/SurahModel";
-import "./surah.css";
-import { ScrollTop } from "..";
 import TranslateData from "../../API/TranslateModel";
+
+import { ScrollTop } from "..";
+
 import { TbZoomInFilled, TbZoomOutFilled } from "react-icons/tb";
+import "./surah.css";
 
 type Props = {
   surahData: SurahData;
@@ -84,10 +87,10 @@ const Surah = ({ surahData, translateData }: Props) => {
           >
             <div className="sub-header">
               <div className="btn-row">
-                <button type="button" onClick={increaseFontSize}>
+                <button title="Büyüt" type="button" onClick={increaseFontSize}>
                   <TbZoomInFilled />
                 </button>
-                <button type="button" onClick={decreaseFontSize}>
+                <button title="Küçült" type="button" onClick={decreaseFontSize}>
                   <TbZoomOutFilled />
                 </button>
               </div>

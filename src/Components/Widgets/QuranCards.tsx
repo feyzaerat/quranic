@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import "./widget.css";
+
 import { Link } from "react-router-dom";
+
 import { IoFlowerOutline } from "react-icons/io5";
 import { IoMdFlower } from "react-icons/io";
 import { BsFlower1 } from "react-icons/bs";
@@ -8,6 +9,7 @@ import { LuFlower } from "react-icons/lu";
 import { GiFlowerEmblem } from "react-icons/gi";
 import { GrNext, GrPrevious } from "react-icons/gr";
 
+import "./widget.css";
 type Props = {};
 
 const QuranCards = (props: Props) => {

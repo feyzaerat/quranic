@@ -1,11 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Header, Pagination, Surah } from "../../Components";
+import { useNavigate, useParams } from "react-router-dom";
+
 import { SurahData } from "../../API/SurahModel";
 import SurahService from "../../API/SurahService";
 import TranslateService from "../../API/TranslateService";
 import TranslateData from "../../API/TranslateModel";
-import { useNavigate, useParams } from "react-router-dom";
-import SurahList from "./SurahList";
+
+import { Header, Pagination, Surah } from "../../Components";
+
+
+
 
 const SurahSingle = () => {
   const navigate = useNavigate();

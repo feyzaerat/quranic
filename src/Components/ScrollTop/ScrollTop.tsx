@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "./scrollTop.css";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
+import "./scrollTop.css";
 
 type Props = {};
 
@@ -36,7 +36,7 @@ const ScrollTop: React.FC<ScrollTopProps> = ({ scrollableRef }) => {
   return (
     <div className="scrollTopBtnContainer">
       {isVisible && (
-        <button type="button" className="btn" onClick={scrollUp}>
+        <button title="Başa Dön" type="button" className="btn" onClick={scrollUp}>
           <MdKeyboardDoubleArrowUp />
         </button>
       )}

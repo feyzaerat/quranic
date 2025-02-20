@@ -1,9 +1,11 @@
 import React from "react";
-import "./pagination.css";
+
 import { Link } from "react-router-dom";
 import { SurahData } from "../../API/SurahModel";
 import TurkishNameAPI from "../../API/TurkishNameAPI";
 import { MdOutlineKeyboardDoubleArrowLeft, MdOutlineKeyboardDoubleArrowRight } from "react-icons/md";
+
+import "./pagination.css";
 
 type Props = {
   surahId: number;

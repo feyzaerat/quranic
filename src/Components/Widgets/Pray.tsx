@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from "react";
-import "./widget.css";
+
 import PrayService from "../../API/PrayService";
 import { PrayResponse, PrayResult } from "../../API/PrayModel";
 import { CitySelect } from "../../Components";
+
 import Gregorian from "../Dates/Gregorian";
 import Hijri from "../Dates/Hijri";
+
 import { PiFlowerFill } from "react-icons/pi";
+import "./widget.css";
 
 const Pray = () => {
   const [city, setCity] = useState<string>(() => {

@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { SurahData } from "../../API/SurahModel";
-import "./header.css";
+
 import { useNavigate } from "react-router-dom";
 import { GiVineFlower } from "react-icons/gi";
-
+import "./header.css";
 
 type Props = {
   surahId: number;
@@ -40,6 +40,7 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
   };
 
   return (
+   <>
     <div className="header">
       <div className="d-flex gap-2 right-header">
         <select
@@ -50,7 +51,7 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
         >
           {Object.keys(surahData.audio).map((reciterId) => (
             <option className="d" key={reciterId} value={reciterId}>
-             {surahData.audio[parseInt(reciterId)].reciter}
+              {surahData.audio[parseInt(reciterId)].reciter}
             </option>
           ))}
         </select>
@@ -87,6 +88,7 @@ const Header = ({ surahId, setSurahId, surahData }: Props) => {
         </div>
       </div>
     </div>
+   </>
   );
 };
 

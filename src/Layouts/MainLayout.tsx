@@ -1,7 +1,8 @@
 import React, { useRef } from "react";
-import Router from "../Routers/Router";
+
 import { Footer, Navbar, Sidebar } from "../Components";
 import "./layout.css";
+import Router from "../Routers/Router";
 type Props = {};
 
 const MainLayout = (props: Props) => {

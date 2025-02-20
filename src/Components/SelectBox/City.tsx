@@ -1,8 +1,8 @@
 import React from "react";
-import { Select } from "antd";
-
-import "./SelectBox.css";
 import CityAPI from "../../API/CityData";
+import { Select } from "antd";
+import "./SelectBox.css";
+
 
 type CityProps = {
   onCityChange: (city: string) => void;
