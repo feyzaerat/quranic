@@ -1,5 +1,6 @@
 {
   "name": "quran-api",
+  "homepage": "https://demo.feyzaerat.com.tr/react/quranic",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
