@@ -1,6 +1,6 @@
 {
-  "short_name": "ReadingQuran",
-  "name": "FKE ReadingQuran",
+  "short_name": "Erat Quranic",
+  "name": "FKE Erat Quranic - Kur'an-ı Kerim Okuma ve Dinleme",
   "icons": [
     {
       "src": "fke-logo-dark.png",
@@ -18,8 +18,10 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": ".",
+  "start_url": "/react/quranic",
+  "scope": "/react/quranic",
   "display": "standalone",
+  "orientation": "portrait",
   "theme_color": "#FEFEFE",
   "background_color": "#8c8372"
 }
