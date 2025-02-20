@@ -118,4 +118,17 @@
   100% {
     transform: translateX(100%) scale(1.25);
   }
+}
+
+@media screen and (max-width: 520px) {
+  .layout.list .content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.25rem;
+    max-height: 50vh;
+  }
+  .layout.list .content .cardy {
+    max-width: 175px;
+    min-width: 100%;
+    height: -webkit-fill-available;
+  }
 }/*# sourceMappingURL=surahList.css.map */

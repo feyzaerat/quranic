@@ -9,6 +9,7 @@ body {
   top: 0;
   left: 0;
   font-family: var(--font-family);
+  overflow: hidden;
 }
 .cursor-none{
   cursor: none;
@@ -34,5 +35,12 @@ body {
   transition: 0.3s ease;  
   cursor: pointer;
   transition: 0.3s ease-in;
+}
+@media screen and (max-width: 520px) {
+  body {
+    position: relative;
+   overflow-y: scroll;
+   overflow-x: hidden;
+  }
 }
 

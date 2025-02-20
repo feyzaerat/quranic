@@ -15,7 +15,7 @@
   }
 
   .layout {
-    background: var(--layout-bg-color)!important;
+    background: var(--layout-bg-color) !important;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -32,6 +32,23 @@
       height: -webkit-fill-available;
       /* max-height: 50vh; */
       min-height: 87vh;
+    }
+  }
+}
+@media screen and (max-width: 520px) {
+  .main-layout {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    overflow-y: scroll;
+    .content{
+      margin-bottom: 4rem;
+    }
+    .layout {
+      position: static;
+      max-height: 100%;
+      left: 0;
+      max-width: 90vw;
     }
   }
 }

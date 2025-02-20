@@ -242,4 +242,50 @@
   padding: 0.5rem;
   margin: 0 1rem;
   border-radius: 50%;
+}
+
+@media screen and (max-width: 520px) {
+  .widget .pray .header,
+  .widget .hadith .header,
+  .widget .quran-cards .header {
+    width: 100%;
+    flex-direction: row;
+    font-family: var(--font-waterfall);
+    font-size: 28px;
+    max-height: 78px;
+    font-weight: 600;
+    line-height: 16px;
+  }
+  .widget .pray .header small,
+  .widget .hadith .header small,
+  .widget .quran-cards .header small {
+    font-size: 14px;
+  }
+  .widget .pray .header {
+    grid-template-columns: 1fr;
+  }
+  .widget .pray .header .date-container {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .widget .pray .widget-content {
+    flex-direction: column;
+  }
+  .widget .pray .pray__container {
+    flex-direction: column;
+  }
+  .widget .hadith .header {
+    flex-wrap: wrap;
+    grid-template-columns: 90% 10%;
+  }
+  .widget .quran-cards {
+    max-height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: -moz-max-content;
+    width: max-content;
+  }
+  .widget .quran-cards .content {
+    grid-template-columns: 1fr;
+  }
 }/*# sourceMappingURL=widget.css.map */
