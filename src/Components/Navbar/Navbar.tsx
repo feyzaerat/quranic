@@ -15,7 +15,7 @@ function Navy() {
   });
 
   useEffect(() => {
-    document.body.classList.remove("light", "dark", "soft");
+    document.body.classList.remove("light", "dark", "soft", "classic");
     document.body.classList.add(theme);
   }, [theme]);
 
@@ -49,6 +49,9 @@ function Navy() {
             </NavDropdown.Item>
             <NavDropdown.Item onClick={() => handleThemeChange("soft")}>
               Soft
+            </NavDropdown.Item>
+            <NavDropdown.Item onClick={() => handleThemeChange("classic")}>
+              Klasik
             </NavDropdown.Item>
           </NavDropdown>
 

@@ -1,6 +1,7 @@
 $colors: (
   "soft-green": #9cbcb7,
   "soft-coffee": #a68c6d,
+  "classic-color": #134361,
   "dark": #3b3e47,
   "light": #ebebed,
   "white": #fefefe,
@@ -41,6 +42,7 @@ $hover-colors: (
 :root {
   --primary-color: #{get-color("soft-green")};
   --secondary-color: #{get-color("soft-coffee")};
+  --classic-color: #{get-color("classic-color")};
   --dark-color: #{get-color("dark")};
   --light-color: #{get-color("light")};
   --white-color: #{get-color("white")};
@@ -107,6 +109,17 @@ body {
   &.soft {
     --bg-color: #{get-color("light")};
     --primary-color: #{get-color("soft-coffee")};
+    --light-text: #{get-color("white")};
+    --dark-bg-text: #{get-color("white")};
+    --light-bg-text: #{get-color("text")};
+    --beige-hover-color: #{get-hover-color("beige")};
+    --shadow_primary: #{get-color("primary")};
+    --focus-color: #{get-color("orange")};
+    
+  }
+  &.classic {
+    --bg-color: #{get-color("light")};
+    --primary-color: #{get-color("classic-color")};
     --light-text: #{get-color("white")};
     --dark-bg-text: #{get-color("white")};
     --light-bg-text: #{get-color("text")};

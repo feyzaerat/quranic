@@ -1,6 +1,7 @@
 :root {
   --primary-color: #9cbcb7;
   --secondary-color: #a68c6d;
+  --classic-color: #134361;
   --dark-color: #3b3e47;
   --light-color: #ebebed;
   --white-color: #fefefe;
@@ -65,6 +66,16 @@ body.light {
 body.soft {
   --bg-color: #ebebed;
   --primary-color: #a68c6d;
+  --light-text: #fefefe;
+  --dark-bg-text: #fefefe;
+  --light-bg-text: #5f6673;
+  --beige-hover-color: white;
+  --shadow_primary: ;
+  --focus-color: #e8ac6b;
+}
+body.classic {
+  --bg-color: #ebebed;
+  --primary-color: #134361;
   --light-text: #fefefe;
   --dark-bg-text: #fefefe;
   --light-bg-text: #5f6673;
